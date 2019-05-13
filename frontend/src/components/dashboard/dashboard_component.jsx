@@ -10,6 +10,10 @@ class Dashboard extends React.Component {
     this.state = {};
   }
 
+  // componentDidMount(){
+  //   this.props.fetchOutfits()
+  // }
+
   render(){
       return ();
   }
