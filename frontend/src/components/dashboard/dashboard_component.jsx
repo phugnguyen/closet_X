@@ -19,10 +19,19 @@ class Dashboard extends React.Component {
     // const outfits = this.props.outfits.map(outfit => {
     //   return <OutfitContainer outfit={outfit} />;
     // });
-    const sampleOutfits = [];
+
+    const sampleOutfits = [
+      {
+        title: "Bold and Brash",
+        username: "DeezCups420",
+        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
+      }
+    ];
+
     const outfits = sampleOutfits.map(outfit => {
       return <OutfitContainer outfit={outfit} />;
     });
+
     return (
       <div className="dashboard">
         <h1>Dashboard</h1>

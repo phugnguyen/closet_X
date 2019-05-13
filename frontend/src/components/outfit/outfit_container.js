@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Outfit from "./outfit_component";
 
-const mSTP = state => {
+const mSTP = ({ state, ownProps }) => {
   return {};
 };
 
