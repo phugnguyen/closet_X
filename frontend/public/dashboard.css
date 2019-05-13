@@ -1,3 +1,7 @@
 .outfit-img {
   height: 250px;
 }
+
+.outfit-img:hover {
+  cursor: pointer;
+}

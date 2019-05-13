@@ -25,6 +25,21 @@ class Dashboard extends React.Component {
         title: "Bold and Brash",
         username: "DeezCups420",
         imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
+      },
+      {
+        title: "Bold and Brash",
+        username: "DeezCups420",
+        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
+      },
+      {
+        title: "Bold and Brash",
+        username: "DeezCups420",
+        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
+      },
+      {
+        title: "Bold and Brash",
+        username: "DeezCups420",
+        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
       }
     ];
 
@@ -34,7 +49,6 @@ class Dashboard extends React.Component {
 
     return (
       <div className="dashboard">
-        <h1>Dashboard</h1>
         <div>Dashboard {/* <SearchBar /> */} </div>
         <div className="outfit-index">{outfits}</div>
       </div>
