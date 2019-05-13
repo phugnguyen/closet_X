@@ -9,7 +9,7 @@ const mSTP = state => {
 
 const mDTP = dispatch => {
   return {
-    fetchOutifts: () => dispatch(fetchOutifts())
+    // fetchOutfits: () => dispatch(fetchOutfits())
   };
 };
 

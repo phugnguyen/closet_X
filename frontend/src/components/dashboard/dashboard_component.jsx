@@ -16,15 +16,16 @@ class Dashboard extends React.Component {
   // }
 
   render() {
-    const outfits = this.props.outfits.map(outfit => {
-      return <OutfitContainer outfit={outfit} />;
-    });
-    // const sampleOutfits = [];
-    // const outfits = sampleOutfits.map(outfit => {
+    // const outfits = this.props.outfits.map(outfit => {
     //   return <OutfitContainer outfit={outfit} />;
     // });
+    const sampleOutfits = [];
+    const outfits = sampleOutfits.map(outfit => {
+      return <OutfitContainer outfit={outfit} />;
+    });
     return (
       <div className="dashboard">
+        <h1>Dashboard</h1>
         <div>Dashboard {/* <SearchBar /> */} </div>
         <div className="outfit-index">{outfits}</div>
       </div>
