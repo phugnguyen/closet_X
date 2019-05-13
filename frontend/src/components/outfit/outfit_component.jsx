@@ -14,8 +14,8 @@ class OutfitShow extends React.Component {
     console.log(this.props);
     return (
       <div className="outfit-item">
-        <div>
-          <img src={imgURL} />
+        <div className="outfit-img-div">
+          <img className="outfit-img" src={imgURL} />
         </div>
         <div>Title: {title}</div>
         <div>Username: {username}</div>
