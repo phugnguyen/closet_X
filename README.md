@@ -18,6 +18,20 @@ The design will be heavily influenced by online shopping stores like Nordstrom a
 - [ ] Closet - **Brice**
 - [ ] Add items and creating outfits - **Nuri**
 - [ ] Dashboard and outfits index view - **Phu**
+### Day 1
+- [x] Learn MERN
+### Day 2
+- [x] Implement User Auth
+### Day 3
+- [ ] Style User Auth
+- [ ] Closet CRUD
+- [ ] Closet View
+- [ ] Items CRUD
+- [ ] AWS integration
+### Day 4
+- [ ] Dashboard
+### Day 5
+- [ ] Improve UI/UX
 ## Plans for getting users and reviews
 Affiliate marketing for the platform would be the best way.
 **Brice, Nuri, & Phu**
