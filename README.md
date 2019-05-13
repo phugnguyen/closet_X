@@ -1,5 +1,27 @@
-# closet_X
-Closet X 
+# ClosetX Wiki 
+## Background and Overview
+ClosetX is an online platform that allows you to digitize your closet! Design and plan outfits for upcoming events, coordinate with group members for a stylish evening out. Not only can you design your own outfits with items from your closet, you can help design outfits for others in their closet! The most important part of this is the user experience. Users will get other users to post their closets so that they can help plan their outfits! A platform connecting stylists and people that need to be styled.
+
+ClosetX is built on the MERN stack: MongoDB, ExpressJS, ReactJS, and NodeJS.
+## Functionality & MVP
+These MVPs are outside of user authentification.
+- [ ] Splash page.
+- [ ] Dashboard to view recent outfits/items/other people's outfits.
+- [ ] Add items to your closet.
+- [ ] Create and view outfits that you have made.
+
+## Technologies & Technical Challenges
+Storyboarding this project as well as creating a user experience like no other, garnering generous support from the community and retailers a like.
+## UI/UX
+The design will be heavily influenced by online shopping stores like Nordstrom and Amazon. White and black theme to provide focus on the clothing items. UI/UX will be the focus of this assignment since it will essentially be one giant CRUD application.
+## Group Members & Work Breakdown
+- [ ] Closet - **Brice**
+- [ ] Add items and creating outfits - **Nuri**
+- [ ] Dashboard and outfits index view - **Phu**
+## Plans for getting users and reviews
+Affiliate marketing for the platform would be the best way.
+**Brice, Nuri, & Phu**
+
 
 
 https://docs.google.com/document/d/1lCEa6OQWAayLUyRoxhFx7b2icox7w00z3Ms1xc4LsP8/edit?usp=sharing
