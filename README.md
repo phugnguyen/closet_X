@@ -30,6 +30,7 @@ The design will be heavily influenced by online shopping stores like Nordstrom a
 - [ ] AWS integration
 ### Day 4
 - [ ] Dashboard
+- [ ] Light photo editing/cropping API
 ### Day 5
 - [ ] Improve UI/UX
 ## Plans for getting users and reviews
