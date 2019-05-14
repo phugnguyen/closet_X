@@ -2,6 +2,23 @@ body {
   font-family: 'Dosis', sans-serif;
 }
 
+button {
+  color: white;
+  background-color: black;
+  font-size: .75em;
+  letter-spacing: .55px;
+  padding: 0 0;
+  font-weight: 400;
+  height: 30px;
+  width: 125px;
+  margin-bottom: 30px;
+  align-self: center;
+  transition-duration: 0.5s;
+  border: none;
+  border-radius: 72px;
+  text-align: center;
+}
+
 .main-page-container {
   height: 100vh;
   width: 100vw;
@@ -30,9 +47,11 @@ body {
 
 .login-form-container, .signup-form-container {
   background: white;
+  padding: 20px;
   width: fit-content;
   height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -67,4 +86,13 @@ body {
 
 .registration-buttons span:hover {
   cursor: pointer;
+}
+
+.signup-form-header, .login-form-header {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+form input {
+  margin-bottom: 10px;
 }

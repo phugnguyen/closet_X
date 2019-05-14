@@ -61,7 +61,8 @@ class SignupModal extends React.Component {
       <div className={showHideClassName}>
         <div className='modal-subcontainer'>
           <div className={'signup-form-container'} >
-          Sign Up!
+            <div className='signup-form-header'>Sign Up!</div>
+            <br/>
             <form onSubmit={this.handleSubmit}>
             <label>Username:
                 <br/>
