@@ -57,6 +57,7 @@ class LoginModal extends React.Component {
         <div className='modal-subcontainer'>
           <div className={'login-form-container'}>
             <div className='login-form-header'>Login!</div>
+            <br/>
             <form onSubmit={this.handleSubmit}>
               <label>Username:
                 <br/>
@@ -73,7 +74,7 @@ class LoginModal extends React.Component {
                 <input type="password" onChange={this.handleInput('password')}/>
               </label>
               <br/>
-              <button onClick={this.handleSubmit}>Sign Up</button>
+              <button onClick={this.handleSubmit}>Log In</button>
               {this.renderErrors()}
             </form>
           </div>
