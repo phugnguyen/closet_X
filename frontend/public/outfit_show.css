@@ -1,0 +1,12 @@
+.item-img {
+  height: 250px;
+}
+
+.outfit-show {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-description-div {
+  display: flex;
+}
