@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import Outfit from "./outfit_component";
+import OutfitShow from "./outfit_show_component";
 
-const mSTP = ({ state, ownProps }) => {
+const mSTP = state => {
   return {};
 };
 
@@ -13,4 +13,4 @@ const mDTP = dispatch => {
 export default connect(
   mSTP,
   mDTP
-)(Outfit);
+)(OutfitShow);
