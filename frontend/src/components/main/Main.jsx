@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LoginModal from './LoginModal';
-import SignupModal from './SignupModal';
+import LoginModalContainer from './LoginModalContainer';
+import SignupModalContainer from './SignupModalContainer';
 
 
 class Main extends React.Component {
@@ -12,29 +12,62 @@ class Main extends React.Component {
       showLoginModal: false,
       showSignupModal: false
     }
+    this.showLoginModal = this.showLoginModal.bind(this);
+    this.showSignupModal = this.showSignupModal.bind(this);
+    this.hideLoginModal = this.hideLoginModal.bind(this);
+    this.hideSignupModal = this.hideSignupModal.bind(this);
   }
 
   showLoginModal() {
-    this.setState({showLoginModal: true})
+    this.setState({showLoginModal: true});
+    document.addEventListener('click', this.hideLoginModal, false)
   }
 
-  hideLoginModal() {
-    this.setState({showLoginModal: false})
+  hideLoginModal(e) {
+    let spot = document.querySelector('.login-form-container');
+    if (spot.contains(e.target)) {
+      return;
+    }
+    this.setState({showLoginModal: false});
+    document.removeEventListener('click', this.hideLoginModal);
   }
 
   showSignupModal() {
-    this.setState({showSignupModal: true})
+    this.setState({showSignupModal: true});
+    document.addEventListener('click', this.hideSignupModal, false);
   }
 
-  hideSignupModal() {
-    this.setState({showSignupModal: false})
+  hideSignupModal(e) {
+    let spot = document.querySelector('.signup-form-container');
+    if (spot.contains(e.target)) {
+      return;
+    }
+    this.setState({showSignupModal: false});
+    document.removeEventListener('click', this.hideSignupModal);
   }
 
   render() {
     return (
-      <div>
-        <LoginModal />
-        <SignupModal />
+      <div className='main-page-container'>
+        <div>
+          <div className='sign-in-container'>
+            <div className='logo-container'>
+
+            </div>
+            <div className='registration-buttons'>
+              <span onClick={this.showSignupModal}>sign up</span>
+              <span onClick={this.showLoginModal}>login</span>
+            </div>
+          </div>
+          <div className='splash-page-container'>
+
+          </div>
+          <div className='splash-page-footer'>
+
+          </div>
+        </div>
+        <LoginModalContainer show={this.state.showLoginModal} hideSignupModal={this.hideLoginModal}/>
+        <SignupModalContainer show={this.state.showSignupModal} hideSignupModal={this.hideSignupModal} />
       </div>
     )
   }
