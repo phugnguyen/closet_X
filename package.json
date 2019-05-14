@@ -4,6 +4,7 @@
   "description": "Closet X",
   "main": "app.js",
   "scripts": {
+    "debug": "nodemon --inspect app.js",
     "start": "node app.js",
     "server": "nodemon app.js",
     "frontend-install": "npm install --prefix frontend",

@@ -10,11 +10,15 @@ const ItemSchema = new Schema({
     type: String,
     required: true
   },
-  catagory: {
+  category: {
     type: String,
     required: true
   },
-  picture: {
+  color: {
+    type: String,
+    required: true
+  },
+  imageURL: {
     type: String,
     required: true
   },
