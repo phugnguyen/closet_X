@@ -11,11 +11,8 @@ const App = () => (
   <Switch>
     <AuthRoute exact path="/" component={MainPage} />
     <AuthRoute exact path="/dashboard" component={Dashboard} />
-<<<<<<< HEAD
     <AuthRoute path="/upload" component={ItemFormContainer} />
-=======
     <AuthRoute exact path="/outfits/id" component={OutfitShow} />
->>>>>>> master
   </Switch>
 );
 
