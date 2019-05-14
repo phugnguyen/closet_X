@@ -1,6 +1,6 @@
 //MODAL DESIGN INSPIRED BY: https://codepen.io/alligatorio/pen/aYzMKL
 
-import React from 'react';
+import React from "react";
 
 class SignupModal extends React.Component {
   constructor(props) {
@@ -25,9 +25,9 @@ class SignupModal extends React.Component {
   }
 
   handleInput(type) {
-    return (e) => this.setState({ [type]: e.target.value })
+    return e => this.setState({ [type]: e.target.value });
   }
-  
+
   handleSubmit(e) {
     e.preventDefault();
     let user = {
@@ -91,6 +91,6 @@ class SignupModal extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default SignupModal;

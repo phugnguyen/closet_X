@@ -1,5 +1,5 @@
-import * as APIUtil from '../util/session_api_util';
-import jwt_decode from 'jwt-decode';
+import * as APIUtil from "../util/session_api_util";
+import jwt_decode from "jwt-decode";
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
@@ -24,7 +24,7 @@ export const receiveErrors = errors => {
 };
 
 export const logoutUser = () => ({
-    type: RECEIVE_USER_LOGOUT
+  type: RECEIVE_USER_LOGOUT
 });
 
 export const signup = user => dispatch => (
@@ -47,7 +47,7 @@ export const login = user => dispatch => (
 )
 
 export const logout = () => dispatch => {
-    localStorage.removeItem('jwtToken')
-    APIUtil.setAuthToken(false)
-    dispatch(logoutUser())
+  localStorage.removeItem("jwtToken");
+  APIUtil.setAuthToken(false);
+  dispatch(logoutUser());
 };

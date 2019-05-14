@@ -6,7 +6,7 @@ import SignupModalContainer from './SignupModalContainer';
 
 class Main extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       showLoginModal: false,
