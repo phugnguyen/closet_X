@@ -12,6 +12,15 @@ class LoginModal extends React.Component {
       password: ""
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.currentUser === true) {
+      this.props.history.push('/dashboard');
+    }
+
+    this.setState({errors: nextProps.errors})
   }
 
   handleInput(type) {
@@ -20,16 +29,54 @@ class LoginModal extends React.Component {
   
   handleSubmit(e) {
     e.preventDefault();
+    let user = {
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password
+    }
+    this.props.login(user)
+  }
 
+  renderErrors() {
+    return (
+      <ul>
+        {Object.keys(this.props.errors).map((error, i) => (
+          <li key={`error-${i}`}>
+            {this.props.errors[error]}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
-    const showHideClassName = this.props.show ? 'login-modal display-block' : 'login-modal display-none';
+    const showHideClassName = this.props.show ? 'login-modal-background display-block' : 'login-modal-background display-none';
 
     return (
       <div className={showHideClassName}>
-        <div className={'login-form-container'}>
-          
+        <div className='modal-subcontainer'>
+          <div className={'login-form-container'}>
+            <div className='login-form-header'>Login!</div>
+            <form onSubmit={this.handleSubmit}>
+              <label>Username:
+                <br/>
+                <input type="text" onChange={this.handleInput('username')}/>
+              </label>
+              <br/>
+              <label>Email:
+                <br/>
+                <input type="text" onChange={this.handleInput('email')}/>
+              </label>
+              <br/>
+              <label>Password: 
+                <br/>
+                <input type="password" onChange={this.handleInput('password')}/>
+              </label>
+              <br/>
+              <button onClick={this.handleSubmit}>Sign Up</button>
+              {this.renderErrors()}
+            </form>
+          </div>
         </div>
       </div>
     );
