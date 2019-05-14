@@ -9,13 +9,10 @@ import OutfitShow from "./outfit/outfit_show_component";
 
 const App = () => (
   <Switch>
+    <ProtectedRoute exact path="/dashboard" component={Dashboard} />
+    <ProtectedRoute path="/upload" component={ItemFormContainer} />
+    <ProtectedRoute exact path="/outfits/:id" component={OutfitShow} />
     <AuthRoute exact path="/" component={MainPage} />
-    <AuthRoute exact path="/dashboard" component={Dashboard} />
-<<<<<<< HEAD
-    <AuthRoute path="/upload" component={ItemFormContainer} />
-=======
-    <AuthRoute exact path="/outfits/id" component={OutfitShow} />
->>>>>>> master
   </Switch>
 );
 
