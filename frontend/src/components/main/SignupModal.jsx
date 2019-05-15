@@ -11,7 +11,7 @@ class SignupModal extends React.Component {
       email: "",
       password: "",
       password2: ""
-    }
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
   }
@@ -21,8 +21,8 @@ class SignupModal extends React.Component {
       this.props.hideLoginModal();
       this.props.history.push('/dashboard');
     }
-    
-    this.setState({errors: nextProps.errors})
+
+    this.setState({ errors: nextProps.errors });
   }
 
   handleInput(type) {
@@ -40,51 +40,59 @@ class SignupModal extends React.Component {
     this.props.signup(user);
   }
 
-
-
   renderErrors() {
-    debugger;
     return (
       <ul>
         {Object.keys(this.props.errors).map((error, i) => (
-          <li key={`error-${i}`}>
-            {this.props.errors[error]}
-          </li>
+          <li key={`error-${i}`}>{this.props.errors[error]}</li>
         ))}
       </ul>
     );
   }
 
   render() {
-    const showHideClassName = this.props.show ? 'signup-modal-background display-block' : 'signup-modal-background display-none';
+    const showHideClassName = this.props.show
+      ? "signup-modal-background display-block"
+      : "signup-modal-background display-none";
 
     return (
       <div className={showHideClassName}>
+
         <div className='modal-subcontainer'>
           <div className={'signup-form-container'} >
             <div className='signup-form-header'>Sign Up!</div>
             <br/>
             <form onSubmit={this.handleSubmit}>
-            <label>Username:
-                <br/>
-                <input type="text" onChange={this.handleInput('username')}/>
+              <label>
+                Username:
+                <br />
+                <input type="text" onChange={this.handleInput("username")} />
               </label>
-              <br/>
-              <label>Email:
-                <br/>
-                <input type="text" onChange={this.handleInput('email')}/>
+              <br />
+              <label>
+                Email:
+                <br />
+                <input type="text" onChange={this.handleInput("email")} />
               </label>
-              <br/>
-              <label>Password: 
-                <br/>
-                <input type="password" onChange={this.handleInput('password')}/>
+              <br />
+              <label>
+                Password:
+                <br />
+                <input
+                  type="password"
+                  onChange={this.handleInput("password")}
+                />
               </label>
-              <br/>
-              <label>Re-enter Password: 
-                <br/>
-                <input type="password" onChange={this.handleInput('password2')}/>
+              <br />
+              <label>
+                Re-enter Password:
+                <br />
+                <input
+                  type="password"
+                  onChange={this.handleInput("password2")}
+                />
               </label>
-              <br/>
+              <br />
               <button onClick={this.handleSubmit}>Sign Up</button>
               {this.renderErrors()}
             </form>
