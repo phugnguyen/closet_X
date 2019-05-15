@@ -1,5 +1,12 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: 'Dosis', sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
 button {
@@ -20,8 +27,13 @@ button {
 }
 
 .main-page-container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
 }
 
 .login-modal-background, .signup-modal-background {

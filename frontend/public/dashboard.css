@@ -1,7 +1,43 @@
+.dashboard {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.dashboard-nav-bar {
+  width: 230px;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid black;
+}
+
+.show-container {
+  width: calc(100vw - 230px);
+  /* height: 100%; */
+  /* border: 1px red solid; */
+}
+
+.dashboard-nav-bar-logo {
+  width: 100%;
+  height: 20%;
+  min-height: 50px;
+  /* border: 1px red solid; */
+}
+
 .outfit-img {
-  height: 250px;
+  /* height: 250px; */
 }
 
 .outfit-img:hover {
   cursor: pointer;
+}
+
+.nav-bar-item-container {
+  height: 70%;
+  /* border: 1px green solid; */
+}
+
+.sign-out-container {
+  height: 10%;
 }

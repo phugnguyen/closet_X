@@ -5,7 +5,8 @@ import SignupModal from './SignupModal';
 const mapStateToProps = (state, ownProps) => {
   return {
     show: ownProps.show,
-    errors: state.errors.session
+    errors: state.errors.session,
+    hideSignupModal: ownProps.hideSignupModal
   };
 };
 

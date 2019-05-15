@@ -21,26 +21,26 @@ class Dashboard extends React.Component {
     // });
 
     const sampleOutfits = [
-      {
-        title: "Bold and Brash",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
-      {
-        title: "Bold and Brash",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
-      {
-        title: "Bold and Brash",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
-      {
-        title: "Bold and Brash",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      }
+      // {
+      //   title: "Bold and Brash",
+      //   username: "DeezCups420",
+      //   imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
+      // },
+      // {
+      //   title: "Bold and Brash",
+      //   username: "DeezCups420",
+      //   imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
+      // },
+      // {
+      //   title: "Bold and Brash",
+      //   username: "DeezCups420",
+      //   imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
+      // },
+      // {
+      //   title: "Bold and Brash",
+      //   username: "DeezCups420",
+      //   imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
+      // }
     ];
 
     const outfits = sampleOutfits.map(outfit => {
@@ -49,8 +49,27 @@ class Dashboard extends React.Component {
 
     return (
       <div className="dashboard">
-        <div>Dashboard {/* <SearchBar /> */} </div>
-        <div className="outfit-index">{outfits}</div>
+        <div className="dashboard-nav-bar">
+          <div className="dashboard-nav-bar-logo">
+
+          </div>
+          <div className="nav-bar-item-container">
+            <ul>
+              <li>Dashboard</li>
+              <li>Your closet</li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div className="sign-out-container" onClick={this.props.logout}>
+            Sign Out
+          </div>
+        </div>
+        <div className="show-container">
+          <div></div>
+          <div className="outfit-index">{outfits}</div>
+        </div>
       </div>
     );
   }
