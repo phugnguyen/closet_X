@@ -17,6 +17,7 @@ class LoginModal extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.currentUser === true) {
+      this.props.hideLoginModal();
       this.props.history.push('/dashboard');
     }
 

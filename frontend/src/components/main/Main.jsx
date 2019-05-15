@@ -25,7 +25,7 @@ class Main extends React.Component {
 
   hideLoginModal(e) {
     let spot = document.querySelector('.login-form-container');
-    if (spot.contains(e.target)) {
+    if (spot && spot.contains(e.target)) {
       return;
     }
     this.setState({showLoginModal: false});
@@ -39,7 +39,7 @@ class Main extends React.Component {
 
   hideSignupModal(e) {
     let spot = document.querySelector('.signup-form-container');
-    if (spot.contains(e.target)) {
+    if (spot && spot.contains(e.target)) {
       return;
     }
     this.setState({showSignupModal: false});
@@ -66,7 +66,7 @@ class Main extends React.Component {
 
           </div>
         </div>
-        <LoginModalContainer show={this.state.showLoginModal} hideSignupModal={this.hideLoginModal}/>
+        <LoginModalContainer show={this.state.showLoginModal} hideLoginModal={this.hideLoginModal}/>
         <SignupModalContainer show={this.state.showSignupModal} hideSignupModal={this.hideSignupModal} />
       </div>
     )
