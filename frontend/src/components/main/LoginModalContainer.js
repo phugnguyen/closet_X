@@ -4,13 +4,13 @@ import LoginModal from './LoginModal';
 
 const mapStateToProps = (state, ownProps) => ({
   show: ownProps.show,
-  errors: state.errors.session
+  errors: state.errors.session,
+  hideLoginModal: ownProps.hideLoginModal
 });
 
 const mapDispatchToProps = (dispatch) => {
   return {
     login: user => dispatch(login(user))
-    // login: user => console.log('Tried to login user: ', user)
   }
 }
 

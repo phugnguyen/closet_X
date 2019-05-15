@@ -18,7 +18,8 @@ class SignupModal extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.currentUser === true) {
-      this.props.history.push("/dashboard");
+      this.props.hideLoginModal();
+      this.props.history.push('/dashboard');
     }
 
     this.setState({ errors: nextProps.errors });
@@ -56,9 +57,11 @@ class SignupModal extends React.Component {
 
     return (
       <div className={showHideClassName}>
-        <div className="modal-subcontainer">
-          <div className={"signup-form-container"}>
-            Sign Up!
+
+        <div className='modal-subcontainer'>
+          <div className={'signup-form-container'} >
+            <div className='signup-form-header'>Sign Up!</div>
+            <br/>
             <form onSubmit={this.handleSubmit}>
               <label>
                 Username:
