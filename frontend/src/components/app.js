@@ -10,14 +10,14 @@ import OutfitShow from "./outfit/outfit_show_component";
 
 const App = () => (
   <Switch>
-    <AuthRoute exact path="/" component={MainPage} />
-    <AuthRoute exact path="/dashboard" component={Dashboard} />
+    <ProtectedRoute exact path="/dashboard" component={Dashboard} />
     <ProtectedRoute path="/upload" component={ItemFormContainer} />
     <ProtectedRoute
       path="/update/:itemId"
       component={ItemUpdateFormContainer}
     />
     <AuthRoute exact path="/outfits/id" component={OutfitShow} />
+    <AuthRoute exact path="/" component={MainPage} />
   </Switch>
 );
 
