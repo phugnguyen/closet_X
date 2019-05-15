@@ -62,8 +62,8 @@ class Dashboard extends React.Component {
               <li></li>
             </ul>
           </div>
-          <div className="sign-out-container" onClick={this.props.logout}>
-            Sign Out
+          <div className="sign-out-container">
+            <div onClick={this.props.logout}>Sign Out</div>
           </div>
         </div>
         <div className="show-container">

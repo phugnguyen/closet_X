@@ -31,7 +31,6 @@ class LoginModal extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let user = {
-      username: this.state.username,
       email: this.state.email,
       password: this.state.password
     }
@@ -60,11 +59,6 @@ class LoginModal extends React.Component {
             <div className='login-form-header'>Login!</div>
             <br/>
             <form onSubmit={this.handleSubmit}>
-              <label>Username:
-                <br/>
-                <input type="text" onChange={this.handleInput('username')}/>
-              </label>
-              <br/>
               <label>Email:
                 <br/>
                 <input type="text" onChange={this.handleInput('email')}/>

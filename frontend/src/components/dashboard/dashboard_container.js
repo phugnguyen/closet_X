@@ -1,4 +1,3 @@
-import React from "react";
 import { connect } from "react-redux";
 import Dashboard from "./dashboard_component";
 import { logout } from '../../actions/session_actions';
