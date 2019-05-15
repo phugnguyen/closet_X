@@ -4,9 +4,16 @@ export const fetchAllItems = () => {
   return axios.get("/api/items");
 };
 
+export const fetchItem = id => {
+  return axios.get(`/api/items/${id}`);
+};
+
 export const createItem = data => {
-  debugger;
   return axios.post("/api/items", data);
+};
+
+export const updateItem = (data, id) => {
+  return axios.post(`/api/items/update/${id}`, data);
 };
 
 export const removeItem = data => {

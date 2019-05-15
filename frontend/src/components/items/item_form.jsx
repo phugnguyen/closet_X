@@ -2,6 +2,14 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 
 class ItemForm extends React.Component {
+  componentDidMount() {
+    if (this.props.formType === "Update Item") {
+      this.props
+        .fetchItem(this.props.match.params.itemId)
+        .then(() => this.setState(this.props.item));
+    }
+  }
+
   constructor(props) {
     super(props);
     this.state = this.props.item;
@@ -21,11 +29,19 @@ class ItemForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
+    formData.append("user", this.state.user);
     formData.append("title", this.state.title);
-    formData.append("image", this.state.image);
+    if (this.state.image) {
+      formData.append("image", this.state.image);
+    }
+    if (this.state.imageURL) {
+      formData.append("imageURL", this.state.imageURL);
+    }
     formData.append("category", this.state.category);
     formData.append("color", this.state.color);
-    this.props.action(formData).then(res => this.props.history.push("/"));
+    this.props
+      .action(formData, this.props.item._id)
+      .then(res => this.props.history.push("/"));
   }
 
   handleImageFile(e) {
@@ -58,6 +74,7 @@ class ItemForm extends React.Component {
             onChange={this.update("category")}
             value={this.state.category}
           >
+            <option>category</option>
             <option value="coat">coat</option>
             <option value="jacket">jacket</option>
             <option value="blazer">blazer</option>
@@ -83,6 +100,7 @@ class ItemForm extends React.Component {
           </select>
 
           <select onChange={this.update("color")} value={this.state.color}>
+            <option>color</option>
             <option value="black">black</option>
             <option value="grey">grey</option>
             <option value="white">white</option>
@@ -101,7 +119,7 @@ class ItemForm extends React.Component {
             <option value="etc">etc</option>
           </select>
 
-          <input type="submit" value="Save Item" />
+          <input type="submit" value={this.props.formType} />
         </form>
       </div>
     );
