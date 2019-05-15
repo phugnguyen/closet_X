@@ -10,8 +10,9 @@ const mapStateToProps = state => {
       category: "",
       color: "",
       image: null,
-      imageUrl: null
-    }
+      imageURL: null
+    },
+    formType: "Create Item"
   };
 };
 
