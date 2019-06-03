@@ -13,6 +13,7 @@ class LoginModal extends React.Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -35,6 +36,15 @@ class LoginModal extends React.Component {
       password: this.state.password
     }
     this.props.login(user)
+  }
+
+  handleDemoLogin(e) {
+    e.preventDefault();
+    let user = {
+      email: "guest@email.com",
+      password: "password"
+    }
+    this.props.login(user);
   }
 
   renderErrors() {
@@ -70,6 +80,8 @@ class LoginModal extends React.Component {
               </label>
               <br/>
               <button onClick={this.handleSubmit}>Log In</button>
+              <br/>
+              <button onClick={this.handleDemoLogin}>Demo Log In</button>
               {this.renderErrors()}
             </form>
           </div>
