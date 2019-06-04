@@ -28,6 +28,8 @@ class Dashboard extends React.Component {
     }
   }
 
+  componentDidMount() {}
+
   render() {
     const times = 10;
     let sampleItems = [];
