@@ -11,15 +11,14 @@ class OutfitShow extends React.Component {
   render() {
     const { imgURL, title, username } = this.props.outfit;
     const { translateDelta } = this.props;
-    console.log(translateDelta);
-    // console.log(this.props);
+
     return (
       <div
         className="outfit-item"
         style={{ transform: `translateX(${translateDelta}%)` }}
       >
         <div className="outfit-img-div">
-          <img className="outfit-img" src={imgURL} />
+          <img className="outfit-img" src={imgURL} alt="" />
         </div>
         <div>Title: {title}</div>
         <div>Username: {username}</div>

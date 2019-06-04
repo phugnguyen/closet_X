@@ -6,7 +6,7 @@ import OutfitContainer from "../outfit/outfit_container";
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { translateDelta: 0, delta: 500 };
+    this.state = { translateDelta: 0, delta: 300 };
   }
 
   // componentDidMount(){
@@ -16,9 +16,9 @@ class Dashboard extends React.Component {
 
   handleButton(arg) {
     const { translateDelta, delta } = this.state;
-    const next = translateDelta - 500;
-    const prev = translateDelta + 500;
+    const prev = translateDelta + delta;
 
+    // prev <= 0 to prevent over scrolling
     if (arg === "prev" && prev <= 0) {
       this.setState({ translateDelta: prev });
     } else if (arg === "next") {
@@ -31,48 +31,24 @@ class Dashboard extends React.Component {
     //   return <OutfitContainer outfit={outfit} />;
     // });
 
-    const sampleItems = [
-      {
-        title: "JK and IU",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
-      {
-        title: "JK and IU",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
-      {
-        title: "JK and IU",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
-      {
-        title: "JK and IU",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
-      {
-        title: "JK and IU",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
-      {
-        title: "JK and IU",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
-      {
-        title: "JK and IU",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
-      {
-        title: "JK and IU",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      }
-    ];
+    const times = 20;
+    let sampleItems = [];
+    for (let i = 0; i < times; i++) {
+      sampleItems.push(
+        {
+          title: "SecretaryKim",
+          username: "Vice Chairman",
+          imgURL:
+            "http://d263ao8qih4miy.cloudfront.net/wp-content/uploads/2018/06/SecretaryKim05-00250.jpg"
+        },
+        {
+          title: "SecretaryKim",
+          username: "Vice Chairman",
+          imgURL:
+            "http://d263ao8qih4miy.cloudfront.net/wp-content/uploads/2018/06/SecretaryKim05-00232.jpg"
+        }
+      );
+    }
 
     const items = sampleItems.map(item => {
       return (
