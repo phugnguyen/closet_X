@@ -27,10 +27,6 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    // const outfits = this.props.outfits.map(outfit => {
-    //   return <OutfitContainer outfit={outfit} />;
-    // });
-
     const times = 10;
     let sampleItems = [];
     for (let i = 0; i < times; i++) {
@@ -50,6 +46,10 @@ class Dashboard extends React.Component {
       );
     }
 
+    // Will replace this later when an items array
+    // is being passed into props
+
+    // const items = this.props.items.map(item => {
     const items = sampleItems.map(item => {
       return (
         <OutfitContainer
