@@ -18,6 +18,8 @@ class Dashboard extends React.Component {
     const { translateDelta, delta } = this.state;
     const prev = translateDelta + delta;
 
+    // implment some sort of throttling function
+    // to prevent bad UX
     // prev <= 0 to prevent over scrolling
     if (arg === "prev" && prev <= 0) {
       this.setState({ translateDelta: prev });
@@ -48,6 +50,7 @@ class Dashboard extends React.Component {
 
     // Will replace this later when an items array
     // is being passed into props
+    // switch lines 53 and 54
 
     // const items = this.props.items.map(item => {
     const items = sampleItems.map(item => {
