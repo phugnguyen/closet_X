@@ -27,11 +27,16 @@
 }
 
 .outfit-img {
-  /* height: 250px; */
+  height: 250px;
 }
 
 .outfit-img:hover {
   cursor: pointer;
+}
+
+.outfit-index {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .nav-bar-item-container {
