@@ -9,8 +9,8 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <div className="dashboard-nav-bar">
-        <div className="dashboard-nav-bar-logo">
+      <div className="nav-bar">
+        <div className="nav-bar-logo">
   
         </div>
         <div className="nav-bar-item-container">
