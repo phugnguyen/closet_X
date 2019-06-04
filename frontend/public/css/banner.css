@@ -1,0 +1,9 @@
+.user-banner {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  background-color: black;
+}

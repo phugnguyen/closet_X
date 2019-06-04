@@ -109,3 +109,10 @@ button {
 form input {
   margin-bottom: 10px;
 }
+
+.user-view {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  
+}
