@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch } from "react-router-dom";
-import NavBar from "./navbar/Navbar";
+import NavBarContainer from "./navbar/NavbarContainer";
 import Banner from "./banner/banner_container"
 import DashboardContainer from "./dashboard/dashboard_container";
 import NewItemContainer from "./items/new_item_container";
@@ -10,7 +10,7 @@ const UserView = () => {
   return (
     <div className="user-view">
       <Banner />
-      <NavBar />
+      <NavBarContainer />
       <div className="show-container">
         <Switch>
           <ProtectedRoute path="/dashboard" component={DashboardContainer} />
