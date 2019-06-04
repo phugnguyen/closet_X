@@ -17,6 +17,7 @@ class Dashboard extends React.Component {
   handleButton(arg) {
     const { translateDelta, delta } = this.state;
 
+    // TODO:
     // implment some sort of throttling function
     // to prevent bad UX
     // prev <= 0 to prevent over scrolling
