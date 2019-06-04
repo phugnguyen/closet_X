@@ -6,7 +6,7 @@ import OutfitContainer from "../outfit/outfit_container";
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { translateDelta: 0 };
+    this.state = { translateDelta: 0, delta: 500 };
   }
 
   // componentDidMount(){
@@ -15,11 +15,14 @@ class Dashboard extends React.Component {
   // }
 
   handleButton(arg) {
-    const { translateDelta } = this.state;
-    if (arg === "next") {
-      this.setState({ translateDelta: translateDelta + 500 });
-    } else if (arg === "prev") {
-      this.setState({ translateDelta: translateDelta - 500 });
+    const { translateDelta, delta } = this.state;
+    const next = translateDelta - 500;
+    const prev = translateDelta + 500;
+
+    if (arg === "prev" && prev <= 0) {
+      this.setState({ translateDelta: prev });
+    } else if (arg === "next") {
+      this.setState({ translateDelta: translateDelta - delta });
     }
   }
 
