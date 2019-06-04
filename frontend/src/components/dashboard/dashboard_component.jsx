@@ -16,13 +16,12 @@ class Dashboard extends React.Component {
 
   handleButton(arg) {
     const { translateDelta, delta } = this.state;
-    const prev = translateDelta + delta;
 
     // implment some sort of throttling function
     // to prevent bad UX
     // prev <= 0 to prevent over scrolling
-    if (arg === "prev" && prev <= 0) {
-      this.setState({ translateDelta: prev });
+    if (arg === "prev" && translateDelta + delta <= 0) {
+      this.setState({ translateDelta: translateDelta + delta });
     } else if (arg === "next") {
       this.setState({ translateDelta: translateDelta - delta });
     }
