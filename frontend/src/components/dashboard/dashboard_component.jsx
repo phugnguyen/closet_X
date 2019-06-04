@@ -31,7 +31,7 @@ class Dashboard extends React.Component {
     //   return <OutfitContainer outfit={outfit} />;
     // });
 
-    const times = 20;
+    const times = 10;
     let sampleItems = [];
     for (let i = 0; i < times; i++) {
       sampleItems.push(
