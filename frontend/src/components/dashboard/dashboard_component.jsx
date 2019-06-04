@@ -19,22 +19,7 @@ class Dashboard extends React.Component {
     //   return <OutfitContainer outfit={outfit} />;
     // });
 
-    const sampleOutfits = [
-      {
-        title: "Bold and Brash",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
-      {
-        title: "Bold and Brash",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
-      {
-        title: "Bold and Brash",
-        username: "DeezCups420",
-        imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      },
+    const sampleItems = [
       {
         title: "Bold and Brash",
         username: "DeezCups420",
@@ -60,16 +45,31 @@ class Dashboard extends React.Component {
         username: "DeezCups420",
         imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
       }
+      // {
+      //   title: "Bold and Brash",
+      //   username: "DeezCups420",
+      //   imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
+      // },
+      // {
+      //   title: "Bold and Brash",
+      //   username: "DeezCups420",
+      //   imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
+      // },
+      // {
+      //   title: "Bold and Brash",
+      //   username: "DeezCups420",
+      //   imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
+      // }
     ];
 
-    const outfits = sampleOutfits.map(outfit => {
-      return <OutfitContainer outfit={outfit} />;
+    const items = sampleItems.map(item => {
+      return <OutfitContainer outfit={item} />;
     });
 
     return (
       <div className="dashboard">
         <div />
-        <div className="outfit-index">{outfits}</div>
+        <div className="outfit-index">{items}</div>
       </div>
     );
   }
