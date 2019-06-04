@@ -2,6 +2,7 @@
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 .dashboard-nav-bar {
@@ -26,6 +27,11 @@
   /* border: 1px red solid; */
 }
 
+.dashboard-buttons {
+  display: flex;
+  justify-content: center;
+}
+
 .outfit-img {
   height: 250px;
 }
@@ -36,7 +42,9 @@
 
 .outfit-index {
   display: flex;
-  margin: auto;
+  overflow: hidden;
+  padding: 100px 0 100px 0;
+  height: 475px;
 }
 
 .outfit-item {
@@ -44,17 +52,17 @@
   transition: transform 300ms ease 100ms;
 }
 
-.outfit-index:hover .outfit-item {
+/* .outfit-index:hover .outfit-item {
   transform: translateX(-25%);
-}
+} */
 
-.outfit-item:hover ~ .outfit-item {
+/* .outfit-item:hover ~ .outfit-item {
   transform: translateX(25%);
-}
+} */
 
-.outfit-item:hover {
+/* .outfit-item:hover {
   transform: scale(1.5) !important;
-}
+} */
 
 .nav-bar-item-container {
   height: 70%;
