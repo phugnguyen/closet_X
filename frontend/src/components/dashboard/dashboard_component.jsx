@@ -7,29 +7,8 @@ import SliderComponent from "../slider/img_slider_component";
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { translateDelta: 0, delta: 300 };
+    this.state = {};
   }
-
-  // componentDidMount(){
-  //   this.props.fetchOutfits()
-  //   .then(fetchItems?)
-  // }
-
-  handleButton(arg) {
-    const { translateDelta, delta } = this.state;
-
-    // TODO:
-    // implment some sort of throttling function
-    // to prevent bad UX
-    // prev <= 0 to prevent over scrolling
-    if (arg === "prev" && translateDelta + delta <= 0) {
-      this.setState({ translateDelta: translateDelta + delta });
-    } else if (arg === "next") {
-      this.setState({ translateDelta: translateDelta - delta });
-    }
-  }
-
-  componentDidMount() {}
 
   render() {
     const times = 10;
@@ -51,31 +30,10 @@ class Dashboard extends React.Component {
       );
     }
 
-    // Will replace this later when an items array
-    // is being passed into props
-    // switch lines 53 and 54
-
-    // const items = this.props.items.map(item => {
-    const items = sampleItems.map(item => {
-      return (
-        <OutfitContainer
-          outfit={item}
-          translateDelta={this.state.translateDelta}
-        />
-      );
-    });
-
     return (
-      <>
-        <div className="dashboard">
-          <div className="outfit-index">{items}</div>
-          <div className="dashboard-buttons">
-            <button onClick={() => this.handleButton("prev")}>Left</button>
-            <button onClick={() => this.handleButton("next")}>Right</button>
-          </div>
-        </div>
+      <div className="dashboard">
         <SliderComponent items={sampleItems} />
-      </>
+      </div>
     );
   }
 }
