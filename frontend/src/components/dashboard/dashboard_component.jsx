@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import OutfitContainer from "../outfit/outfit_container";
+import SliderComponent from "../slider/img_slider_component";
 // import SearchBar
 
 class Dashboard extends React.Component {
@@ -65,13 +66,16 @@ class Dashboard extends React.Component {
     });
 
     return (
-      <div className="dashboard">
-        <div className="outfit-index">{items}</div>
-        <div className="dashboard-buttons">
-          <button onClick={() => this.handleButton("prev")}>Left</button>
-          <button onClick={() => this.handleButton("next")}>Right</button>
+      <>
+        <div className="dashboard">
+          <div className="outfit-index">{items}</div>
+          <div className="dashboard-buttons">
+            <button onClick={() => this.handleButton("prev")}>Left</button>
+            <button onClick={() => this.handleButton("next")}>Right</button>
+          </div>
         </div>
-      </div>
+        <SliderComponent items={sampleItems} />
+      </>
     );
   }
 }
