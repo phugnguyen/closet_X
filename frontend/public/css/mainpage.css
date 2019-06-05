@@ -18,7 +18,8 @@ button {
   font-weight: 400;
   height: 30px;
   width: 125px;
-  margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   align-self: center;
   transition-duration: 0.5s;
   border: none;
@@ -107,4 +108,11 @@ button {
 
 form input {
   margin-bottom: 10px;
+}
+
+.user-view {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  
 }
