@@ -1,12 +1,10 @@
 import { connect } from "react-redux";
 import Dashboard from "./dashboard_component";
-import { logout } from '../../actions/session_actions';
+import { logout } from "../../actions/session_actions";
 // import fetchOutfits
 
 const mSTP = state => {
-  return {
-
-  };
+  return {};
 };
 
 const mDTP = dispatch => {

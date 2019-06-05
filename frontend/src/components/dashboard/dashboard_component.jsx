@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import OutfitContainer from "../outfit/outfit_container";
+import SliderComponent from "../slider/img_slider_component";
 // import SearchBar
 
 class Dashboard extends React.Component {
@@ -9,47 +10,29 @@ class Dashboard extends React.Component {
     this.state = {};
   }
 
-  // componentDidMount(){
-  //   this.props.fetchOutfits()
-  //   .then(fetchItems?)
-  // }
-
   render() {
-    // const outfits = this.props.outfits.map(outfit => {
-    //   return <OutfitContainer outfit={outfit} />;
-    // });
-
-    const sampleOutfits = [
-      // {
-      //   title: "Bold and Brash",
-      //   username: "DeezCups420",
-      //   imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      // },
-      // {
-      //   title: "Bold and Brash",
-      //   username: "DeezCups420",
-      //   imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      // },
-      // {
-      //   title: "Bold and Brash",
-      //   username: "DeezCups420",
-      //   imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      // },
-      // {
-      //   title: "Bold and Brash",
-      //   username: "DeezCups420",
-      //   imgURL: "https://pbs.twimg.com/media/C7MqraEXkAExdXg.jpg"
-      // }
-    ];
-
-    const outfits = sampleOutfits.map(outfit => {
-      return <OutfitContainer outfit={outfit} />;
-    });
+    const times = 10;
+    let sampleItems = [];
+    for (let i = 0; i < times; i++) {
+      sampleItems.push(
+        {
+          title: "SecretaryKim",
+          username: "Vice Chairman",
+          imgURL:
+            "http://d263ao8qih4miy.cloudfront.net/wp-content/uploads/2018/06/SecretaryKim05-00250.jpg"
+        },
+        {
+          title: "SecretaryKim",
+          username: "Vice Chairman",
+          imgURL:
+            "http://d263ao8qih4miy.cloudfront.net/wp-content/uploads/2018/06/SecretaryKim05-00232.jpg"
+        }
+      );
+    }
 
     return (
       <div className="dashboard">
-        <div></div>
-        <div className="outfit-index">{outfits}</div>
+        <SliderComponent items={sampleItems} />
       </div>
     );
   }
