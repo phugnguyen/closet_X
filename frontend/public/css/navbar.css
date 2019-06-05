@@ -1,0 +1,17 @@
+.nav-bar {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid black;
+  padding-left: 10px;
+}
+
+.nav-bar-logo {
+  width: 100%;
+  height: 20%;
+  min-height: 50px;
+}
+
+.nav-bar-item-container {
+  height: 70%;
+}
