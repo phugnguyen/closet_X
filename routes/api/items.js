@@ -20,7 +20,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", upload.single("image"), (req, res) => {
-  console.log("hey");
+  console.log("hey234");
   console.log(req);
   let imageURL = "";
   const newItem = new Item({
@@ -31,7 +31,7 @@ router.post("/", upload.single("image"), (req, res) => {
     imageURL: "nuri"
   });
   if (req.file) newItem.imageURL = req.file.location;
-
+  console.log("nin");
   newItem.save().then(item => res.json(item));
 });
 

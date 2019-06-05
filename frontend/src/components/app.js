@@ -3,6 +3,7 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import { Switch } from "react-router-dom";
 import ItemFormContainer from "../components/items/new_item_container";
 import ItemUpdateFormContainer from "../components/items/edit_item_container";
+import OutfitScrollbar from "../components/outfit/outfit_scrollbar_container";
 
 import MainPage from "./main/Main";
 import Dashboard from "./dashboard/dashboard_container";
@@ -12,6 +13,7 @@ const App = () => (
   <Switch>
     <ProtectedRoute exact path="/dashboard" component={Dashboard} />
     <ProtectedRoute path="/upload" component={ItemFormContainer} />
+    <ProtectedRoute path="/scrollbar" component={OutfitScrollbar} />
     <ProtectedRoute
       path="/update/:itemId"
       component={ItemUpdateFormContainer}

@@ -10,11 +10,12 @@ const ItemReducer = (state = {}, action) => {
   let newState;
   switch (action.type) {
     case RECEIVE_ALL_ITEMS:
-      return action.items;
+      return action.items.data;
     case RECEIVE_ITEM:
       return merge({}, state, { [action.item._id]: action.item });
     case REMOVE_ITEM:
       newState = merge({}, state);
+      delete newState[action.itemId];
       return newState;
     default:
       return state;
