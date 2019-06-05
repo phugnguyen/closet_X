@@ -1,0 +1,35 @@
+.outfit-create-container {
+  display: flex;
+  width: calc(100vw - 230px);
+  padding-top: 50px;
+  height: 100%;
+}
+.canvas-container {
+  width: 70%;
+}
+
+canvas {
+  width: 100%;
+  height: calc(100% - 50px);
+  border: 1px solid red;
+}
+
+.outfit-items-scrollbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  border: 1px solid red;
+}
+
+.outfit-create-options {
+  height: 50px;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.test-div {
+  height: 100%;
+  width: 100%;
+}

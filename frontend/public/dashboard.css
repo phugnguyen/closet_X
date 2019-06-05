@@ -4,13 +4,6 @@
   display: flex;
 }
 
-.show-container {
-  width: calc(100vw - 230px);
-  padding-top: 50px;
-  /* height: 100%; */
-  /* border: 1px red solid; */
-}
-
 .outfit-img {
   /* height: 250px; */
 }
