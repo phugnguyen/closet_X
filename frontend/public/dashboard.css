@@ -5,14 +5,6 @@
   flex-direction: column;
 }
 
-.dashboard-nav-bar {
-  width: 230px;
-  /* height: 100%; */
-  display: flex;
-  flex-direction: column;
-  border-right: 1px solid black;
-}
-
 .show-container {
   width: calc(100vw - 230px);
   padding-top: 50px;
@@ -68,6 +60,7 @@
 .nav-bar-item-container {
   height: 70%;
 }
+
 
 .sign-out-container {
   height: 10%;
