@@ -5,20 +5,30 @@ import OutfitContainer from "../outfit/outfit_container";
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { translateDelta: 0, delta: 300 };
+    this.state = {
+      translateDelta: 0,
+      delta: 300,
+      itemsLeft: this.props.items.length - 3
+    };
   }
 
   handleButton(arg) {
-    const { translateDelta, delta } = this.state;
+    const { translateDelta, delta, itemsLeft } = this.state;
 
     // TODO:
     // implment some sort of throttling function
     // to prevent bad UX
     // prev <= 0 to prevent over scrolling
     if (arg === "prev" && translateDelta + delta <= 0) {
-      this.setState({ translateDelta: translateDelta + delta });
-    } else if (arg === "next") {
-      this.setState({ translateDelta: translateDelta - delta });
+      this.setState({
+        translateDelta: translateDelta + delta,
+        itemsLeft: itemsLeft + 3
+      });
+    } else if (arg === "next" && itemsLeft >= 0) {
+      this.setState({
+        translateDelta: translateDelta - delta,
+        itemsLeft: itemsLeft - 3
+      });
     }
   }
 
