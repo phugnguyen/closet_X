@@ -19,10 +19,10 @@ class OutfitCreate extends React.Component {
     let canvas = document.getElementById("canvas");
     let img = new Image();
     img.crossOrigin = "anonymous"
-    let imgURL = item.source;
+    img.src = item.source;
     let x = parseInt(item.pos.x - canvas.offsetLeft);
     let y = parseInt(item.pos.y - canvas.offsetTop);
-    let newItem = {image: img, x, y, isDragging: false, url: imgURL};
+    let newItem = {image: img, x, y, width: 100, height: 100};
 
     this.setState({
       items: [...this.state.items, newItem]

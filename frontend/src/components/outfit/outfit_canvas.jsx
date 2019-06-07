@@ -10,6 +10,7 @@ class OutfitCanvas extends React.Component {
       startX: null,
       startY: null,
     };
+    this.renderImage = this.renderImage.bind(this);
   }
 
   // onImageDrop = (e) => {
@@ -41,13 +42,19 @@ class OutfitCanvas extends React.Component {
 
 
   renderAll() {
+    debugger;
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     for(let i = 0; i < this.props.items.length; i++) {
       let r = this.props.items[i];
       ctx.drawImage(r.image, r.x, r.y, r.width, r.height);
     }
+  }
+
+  renderImage(image, ctx) {
+    ctx.drawImage(image.image, image.x, image.y, image.width, image.height);
   }
 
   // onImageDragOver = (e) => {
