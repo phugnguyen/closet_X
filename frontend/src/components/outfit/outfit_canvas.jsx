@@ -6,9 +6,13 @@ class OutfitCanvas extends React.Component {
     super(props);
 
     this.state = {
+      isDragging: false,
       imageURLs : []
     };
     this.renderToCanvas = this.renderToCanvas.bind(this);
+    this.onMouseDown = this.onMouseDown.bind(this);
+    this.onMouseUp = this.onMouseUp.bind(this);
+    this.onMouseMove = this.onMouseMove.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -47,15 +51,16 @@ class OutfitCanvas extends React.Component {
   onMouseDown(e) {
     e.preventDefault();
     e.stopPropagation();
+    console.log('mousedown');
 
     let canvas = document.getElementById("canvas");
 
-    let mx = parseInt(e.clientX - canvas.offset().left);
-    let my = parseInt(e.clientY - canvas.offset().top);
+    let mx = parseInt(e.clientX - canvas.offsetLeft);
+    let my = parseInt(e.clientY - canvas.offsetTop);
 
     this.setState({isDragging: false})
-    for(let i = 0; i < this.state.images.length; i++) {
-      let r = this.state.images[i];
+    for(let i = 0; i < this.props.items.length; i++) {
+      let r = this.props.items[i];
       if(mx > r.x && mx < r.x + r.width && my>r.y && my<r.y+r.height) {
         r.isDragging=true;
         this.setState({isDragging: true});
@@ -67,13 +72,23 @@ class OutfitCanvas extends React.Component {
   onMouseUp(e) {
     e.preventDefault();
     e.stopPropagation();
+    console.log('mouseup');
 
     this.setState({isDragging: false});
     let curr;
 
-    for(var i=0; i < this.state.images.length; i++){
-      curr = this.state.images[i]
+    for(var i=0; i < this.props.items.length; i++){
+      curr = this.props.items[i]
       curr.isDragging=false;
+    }
+
+    let canvas = document.getElementById("canvas");
+    let ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for(let i = 0; i < this.props.items.length; i++) {
+      let r = this.props.items[i];
+      this.renderToCanvas(ctx, r);
     }
   }
 
@@ -82,23 +97,31 @@ class OutfitCanvas extends React.Component {
 
     e.preventDefault();
     e.stopPropagation();
+    console.log('mousemove');
     let canvas = document.getElementById("canvas");
 
-    let mx = parseInt(e.clientX - canvas.offset().left);
-    let my = parseInt(e.clientY - canvas.offset().top);
+    let mx = parseInt(e.clientX - canvas.offsetLeft);
+    let my = parseInt(e.clientY - canvas.offsetTop);
 
     let dx = mx - this.state.startX;
     let dy = my - this.state.startY;
 
-    for(let i = 0; i < this.state.images.length; i++) {
-      let r = this.state.images[i];
+    for(let i = 0; i < this.props.items.length; i++) {
+      let r = this.props.items[i];
       if(r.isDragging) {
         r.x += dx;
         r.y += dy;
       }
     }
     this.setState({startX: mx, startY: my});
-  // }
+
+    let ctx = canvas.getContext("2d");
+
+    for(let i = 0; i < this.props.items.length; i++) {
+      let r = this.props.items[i];
+      this.renderToCanvas(ctx, r);
+    }
+  }
 
   render() {
     const { connectDropTarget, droppedItem } = this.props;
@@ -109,9 +132,9 @@ class OutfitCanvas extends React.Component {
         <canvas
           id="canvas"
           onClick={this.handleCanvasClick}
-          // onMouseDown={this.onMouseDown}
-          // onDrop={(e) => this.onImageDrop(e)}
-          // onDragOver={(e) => this.onImageDragOver(e)}
+          onMouseDown={this.onMouseDown}
+          onMouseUp={this.onMouseUp}
+          onMouseMove={this.onMouseMove}
         >
         </canvas>
         <div className="outfit-create-options">
