@@ -4,14 +4,21 @@
   padding-top: 50px;
   height: 100%;
 }
+
 .canvas-container {
   width: 70%;
+  min-width: 600px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
 }
 
 canvas {
-  width: 100%;
-  height: calc(100% - 50px);
-  border: 1px solid red;
+  border: 3px solid black;
 }
 
 .outfit-items-scrollbar {
