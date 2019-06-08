@@ -51,7 +51,6 @@ class OutfitCanvas extends React.Component {
   onMouseDown(e) {
     e.preventDefault();
     e.stopPropagation();
-    console.log('mousedown');
 
     let canvas = document.getElementById("canvas");
 
@@ -72,7 +71,6 @@ class OutfitCanvas extends React.Component {
   onMouseUp(e) {
     e.preventDefault();
     e.stopPropagation();
-    console.log('mouseup');
 
     this.setState({isDragging: false});
     let curr;
@@ -97,7 +95,6 @@ class OutfitCanvas extends React.Component {
 
     e.preventDefault();
     e.stopPropagation();
-    console.log('mousemove');
     let canvas = document.getElementById("canvas");
 
     let mx = parseInt(e.clientX - canvas.offsetLeft);
