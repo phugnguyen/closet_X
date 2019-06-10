@@ -25,20 +25,20 @@ class OutfitShow extends React.Component {
         category: "bottom",
         id: 2,
         title: "Pacsun Distressed Jeans",
-        imgURL:
+        imageURL:
           "https://www.pacsun.com/dw/image/v2/AAJE_PRD/on/demandware.static/-/Sites-pacsun_storefront_catalog/default/dw8830fda9/product_images/0132454210128NEW_00_510.jpg?sw=690&sh=1070&sm=fit"
       },
       {
         category: "top",
         id: 1,
         title: "Supreme Classic Logo",
-        imgURL: "https://i.ebayimg.com/images/i/142282115467-0-1/s-l1000.jpg"
+        imageURL: "https://i.ebayimg.com/images/i/142282115467-0-1/s-l1000.jpg"
       },
       {
         category: "shoes",
         id: 3,
         title: "Supreme Classic Logo",
-        imgURL:
+        imageURL:
           "https://image.goat.com/attachments/product_template_pictures/images/008/654/801/original/258638_00.png.png"
       }
     ];
@@ -52,7 +52,7 @@ class OutfitShow extends React.Component {
     const images = items.map(item => {
       return (
         <div>
-          <img src={item.imgURL} className="item-img" alt="" />
+          <img src={item.imageURL} className="item-img" alt="" />
         </div>
       );
     });

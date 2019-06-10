@@ -8,8 +8,14 @@ class Dashboard extends React.Component {
     this.state = {
       translateDelta: 0,
       delta: 300,
-      itemsLeft: this.props.items.length - 3
+      itemsLeft: 0
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.alength !== prevProps.alength) {
+      this.setState({ itemsLeft: this.props.alength - 3 });
+    }
   }
 
   handleButton(arg) {
@@ -33,6 +39,8 @@ class Dashboard extends React.Component {
   }
 
   render() {
+    console.log(this.state.itemsLeft);
+    console.log(this.props.alength);
     const renderItems = this.props.items.map(item => {
       return (
         <OutfitContainer

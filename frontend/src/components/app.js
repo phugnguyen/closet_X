@@ -18,6 +18,7 @@ const App = () => (
       path="/(dashboard|closet|outfits|upload)"
       component={UserView}
     />
+    <ProtectedRoute path="/items" component={OutfitScrollbar} />
     <AuthRoute exact path="/" component={MainPage} />
     <Redirect from="/" to="/" />
   </Switch>

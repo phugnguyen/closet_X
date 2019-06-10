@@ -4,7 +4,8 @@ import OutfitScrollbar from "./outfit_scrollbar";
 
 const mapStateToProps = state => {
   return {
-    items: Object.values(state.entities.items)
+    items: Object.values(state.entities.items),
+    itemLength: Object.values(state.entities.items).length
   };
 };
 
