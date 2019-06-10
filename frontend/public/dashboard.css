@@ -17,6 +17,8 @@
 .outfit-index {
   display: flex;
   overflow: hidden;
+  padding: 100px 0 100px 0;
+  height: 5000px;
 }
 
 .outfit-item {

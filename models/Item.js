@@ -10,6 +10,11 @@ const ItemSchema = new Schema({
     type: String,
     required: true
   },
+  tags: {
+    type: Map,
+    of: String,
+    required: false
+  },
   category: {
     type: String,
     required: true

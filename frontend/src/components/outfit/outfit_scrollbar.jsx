@@ -1,8 +1,8 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
-import OutfitContainer from "../outfit/outfit_container";
+// import ItemIndex from "../items/item_index";
+import ItemSliderShow from "./item_slide_show";
 
-class Dashboard extends React.Component {
+class OutfitScrollbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,9 +12,13 @@ class Dashboard extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.props.fetchAllItems();
+  }
+
   componentDidUpdate(prevProps) {
-    if (this.props.alength !== prevProps.alength) {
-      this.setState({ itemsLeft: this.props.alength - 3 });
+    if (this.props.itemLength !== prevProps.itemLength) {
+      this.setState({ itemsLeft: this.props.itemLength - 3 });
     }
   }
 
@@ -43,16 +47,18 @@ class Dashboard extends React.Component {
     console.log(this.props.alength);
     const renderItems = this.props.items.map(item => {
       return (
-        <OutfitContainer
-          outfit={item}
-          translateDelta={this.state.translateDelta}
-        />
+        <div>
+          <ItemSliderShow
+            item={item}
+            translateDelta={this.state.translateDelta}
+          />
+        </div>
       );
     });
 
     return (
       <div className="dashboard">
-        <div className="outfit-index">{renderItems}</div>
+        <div className="item-slide-index">{renderItems}</div>
         <div className="dashboard-buttons">
           <button onClick={() => this.handleButton("prev")}>Left</button>
           <button onClick={() => this.handleButton("next")}>Right</button>
@@ -62,4 +68,4 @@ class Dashboard extends React.Component {
   }
 }
 
-export default withRouter(Dashboard);
+export default OutfitScrollbar;

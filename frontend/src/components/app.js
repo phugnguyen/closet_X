@@ -1,5 +1,8 @@
 import React from "react";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
+import ItemFormContainer from "../components/items/new_item_container";
+import ItemUpdateFormContainer from "../components/items/edit_item_container";
+import OutfitScrollbar from "../components/outfit/outfit_scrollbar_container";
 import { Switch, Redirect, Route } from "react-router-dom";
 import DashboardContainer from "../components/dashboard/dashboard_container";
 
@@ -15,6 +18,7 @@ const App = () => (
       path="/(dashboard|closet|outfits|upload)"
       component={UserView}
     />
+    <ProtectedRoute path="/items" component={OutfitScrollbar} />
     <AuthRoute exact path="/" component={MainPage} />
     <Redirect from="/" to="/" />
   </Switch>
