@@ -32,6 +32,9 @@ class Dashboard extends React.Component {
 
     return (
       <div className="dashboard">
+        <h1>Trending</h1>
+        <SliderComponent items={sampleItems} />
+        <h1>Friends</h1>
         <SliderComponent items={sampleItems} />
       </div>
     );
