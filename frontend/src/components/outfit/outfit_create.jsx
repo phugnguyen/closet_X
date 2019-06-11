@@ -3,15 +3,18 @@ import { DragDropContext } from "react-dnd"
 import HTML5Backend from "react-dnd-html5-backend"
 import OutfitCanvasContainer from "./outfit_canvas_container";
 import ImageComp from "./image_comp";
+import OutfitScrollBarContainer from "./outfit_scrollbar_container";
+import item_form from "../items/item_form";
 
 class OutfitCreate extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      items: []
+      items: [],
     }
     this.onDrop = this.onDrop.bind(this);
+    this.handleClear = this.handleClear.bind(this);
   }
 
   onDrop(item) {
@@ -20,20 +23,24 @@ class OutfitCreate extends React.Component {
     img.src = item.source;
     let x = parseInt(item.pos.x);
     let y = parseInt(item.pos.y);
-    let newItem = {image: img, x, y, width: 200, height: 200};
+    let newItem = {id: item.id, image: img, x, y, width: 200, height: 200};
 
     this.setState({
       items: [...this.state.items, newItem]
     })
   }
 
+  handleClear(e) {
+    e.preventDefault();
+    this.setState({items: []})
+  }
+
   render() {
     return (
       <div className="outfit-create-container">
-        <OutfitCanvasContainer items={this.state.items} onDrop={this.onDrop}/>
+        <OutfitCanvasContainer items={this.state.items} onDrop={this.onDrop} handleClear={this.handleClear}/>
         <div className="outfit-items-scrollbar">
-          <ImageComp id={`1`}/>
-          <ImageComp id={`2`}/>
+          <OutfitScrollBarContainer />
         </div>
       </div>
     )

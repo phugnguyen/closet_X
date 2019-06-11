@@ -7,8 +7,10 @@ class OutfitCanvas extends React.Component {
 
     this.state = {
       isDragging: false,
-      imageURLs : []
+      imageURLs : [],
+      itemIDs: []
     };
+    this.renderAll = this.renderAll.bind(this);
     this.renderToCanvas = this.renderToCanvas.bind(this);
     this.onMouseDown = this.onMouseDown.bind(this);
     this.onMouseUp = this.onMouseUp.bind(this);
@@ -17,19 +19,18 @@ class OutfitCanvas extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.items !== prevProps.items) {
-      this.setState({imageURLs : []});
+      this.setState({imageURLs : [],
+        itemIDs: []});
       for(let i = 0; i < this.props.items.length; i++) {
-        this.setState({imageURLs : [...this.state.imageURLs, this.props.items[i].image.src]})
+        this.setState({imageURLs : [...this.state.imageURLs, this.props.items[i].image.src],
+          itemIDs: [...this.state.itemIDs, this.props.items[i].id]})
       }
 
       let canvas = document.getElementById("canvas");
       let ctx = canvas.getContext("2d");
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      for(let i = 0; i < this.props.items.length; i++) {
-        let r = this.props.items[i];
-        this.renderToCanvas(ctx, r);
-      }
+      this.renderAll(ctx);
     }
   }
 
@@ -37,6 +38,13 @@ class OutfitCanvas extends React.Component {
     let canvas = document.getElementById("canvas");
     canvas.height = 600;
     canvas.width = 600;
+  }
+
+  renderAll(ctx) {
+    for(let i = 0; i < this.props.items.length; i++) {
+      let r = this.props.items[i];
+      this.renderToCanvas(ctx, r);
+    }
   }
 
   renderToCanvas(ctx, imageObj) {
@@ -84,10 +92,7 @@ class OutfitCanvas extends React.Component {
     let ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    for(let i = 0; i < this.props.items.length; i++) {
-      let r = this.props.items[i];
-      this.renderToCanvas(ctx, r);
-    }
+    this.renderAll(ctx);
   }
 
   onMouseMove(e) {
@@ -113,17 +118,13 @@ class OutfitCanvas extends React.Component {
     this.setState({startX: mx, startY: my});
 
     let ctx = canvas.getContext("2d");
-
-    for(let i = 0; i < this.props.items.length; i++) {
-      let r = this.props.items[i];
-      this.renderToCanvas(ctx, r);
-    }
+    this.renderAll(ctx);
   }
 
   render() {
-    const { connectDropTarget, droppedItem } = this.props;
+    const { connectDropTarget } = this.props;
     let className = null;
-    console.log(this.props);
+    console.log("canvas: ", this.state);
     return connectDropTarget(
       <div className={`canvas-container ${className}`}>
         <canvas
@@ -135,7 +136,7 @@ class OutfitCanvas extends React.Component {
         >
         </canvas>
         <div className="outfit-create-options">
-          <button>Clear</button>
+          <button onClick={this.props.handleClear}>Clear</button>
           <button>Save</button>
         </div>
       </div>
