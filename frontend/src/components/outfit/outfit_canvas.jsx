@@ -1,5 +1,5 @@
 import React from "react";
-import { DropTarget } from "react-dnd"
+import { DropTarget } from "react-dnd";
 
 class OutfitCanvas extends React.Component {
   constructor(props) {
@@ -51,7 +51,8 @@ class OutfitCanvas extends React.Component {
   }
 
   renderToCanvas(ctx, imageObj) {
-    let img = new Image();
+    let img = new Image ();
+    img.crossOrigin = "Anonymous";
     img.src = imageObj.image.src;
 
     img.onload = function() {
@@ -132,10 +133,22 @@ class OutfitCanvas extends React.Component {
 
   handleSave(e) {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append("user", this.state.user);
-    formData.append("title", this.state)
 
+    let canvas = document.getElementById("canvas");
+    // let ctx = canvas.getContext("2d");
+
+    let image = canvas.toDataURL('png');
+    console.log(image);
+  
+  //   const formData = new FormData();
+  //   formData.append("user", this.props.user);
+  //   formData.append("title", this.state.title);
+  //   formData.append("imageURL", this.state.imageURL);
+  //   formData.append("items", this.state.itemIDs)
+  //   debugger;
+
+  //   this.props.createOutfit(formData)
+  //   .then(res => this.props.history.push("/"));
   }
 
   render() {

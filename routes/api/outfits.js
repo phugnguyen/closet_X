@@ -9,7 +9,7 @@ router.get("/test", (req, res) =>
 
 router.post("/", upload.single("image"), (req, res) => {
   let imageURL = "";
-
+  debugger;
   const newOutfit = new Outfit({
     user: req.body.user,
     title: req.body.title,
