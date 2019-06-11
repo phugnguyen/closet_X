@@ -8,13 +8,16 @@ class OutfitCanvas extends React.Component {
     this.state = {
       isDragging: false,
       imageURLs : [],
-      itemIDs: []
+      itemIDs: [],
+      title: ""
     };
     this.renderAll = this.renderAll.bind(this);
     this.renderToCanvas = this.renderToCanvas.bind(this);
     this.onMouseDown = this.onMouseDown.bind(this);
     this.onMouseUp = this.onMouseUp.bind(this);
     this.onMouseMove = this.onMouseMove.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSave = this.handleSave.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -121,10 +124,23 @@ class OutfitCanvas extends React.Component {
     this.renderAll(ctx);
   }
 
+  handleChange(e) {
+    this.setState({
+      title: e.currentTarget.value
+    })
+  }
+
+  handleSave(e) {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("user", this.state.user);
+    formData.append("title", this.state)
+
+  }
+
   render() {
     const { connectDropTarget } = this.props;
     let className = null;
-    console.log("canvas: ", this.state);
     return connectDropTarget(
       <div className={`canvas-container ${className}`}>
         <canvas
@@ -136,8 +152,12 @@ class OutfitCanvas extends React.Component {
         >
         </canvas>
         <div className="outfit-create-options">
-          <button onClick={this.props.handleClear}>Clear</button>
-          <button>Save</button>
+          <input type="text" value={this.state.title} onChange={this.handleChange}
+            placeholder="Outfit Title..."></input>
+          <div className="outfit-button-container">
+            <button onClick={this.props.handleClear}>Clear</button>
+            <button onClick={this.handleSave}>Save</button>
+          </div>
         </div>
       </div>
     )

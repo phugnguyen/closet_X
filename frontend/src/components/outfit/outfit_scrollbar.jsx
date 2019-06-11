@@ -57,7 +57,7 @@ class OutfitScrollbar extends React.Component {
     });
 
     return (
-      <div className="dashboard">
+      <div className="outfit-item-slider">
         <div className="item-slide-index">{renderItems}</div>
         <div className="dashboard-buttons">
           <button onClick={() => this.handleButton("prev")}>Left</button>

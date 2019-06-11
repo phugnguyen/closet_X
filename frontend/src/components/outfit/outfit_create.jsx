@@ -2,7 +2,6 @@ import React from "react";
 import { DragDropContext } from "react-dnd"
 import HTML5Backend from "react-dnd-html5-backend"
 import OutfitCanvasContainer from "./outfit_canvas_container";
-import ImageComp from "./image_comp";
 import OutfitScrollBarContainer from "./outfit_scrollbar_container";
 import item_form from "../items/item_form";
 

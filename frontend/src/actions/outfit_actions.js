@@ -5,6 +5,7 @@ export const RECEIVE_ALL_OUTFITS = "RECEIVE_ALL_OUTFITS";
 export const RECEIVE_OUTFIT = "RECEIVE_OUTFIT";
 export const REMOVE_OUTFIT = "REMOVE_OUTFIT";
 export const RECEIVE_OUTFIT_ERRORS = "RECEIVE_OUTFIT_ERRORS";
+export const CREATE_OUTFIT = "CREATE_OUTFIT";
 
 export const receiveAllOutfits = outfits => ({
   type: RECEIVE_ALL_OUTFITS,
@@ -40,9 +41,9 @@ export const fetchOutfit = id => dispatch =>
     )
   );
 
-export const createItem = item => dispatch =>
-  OutfitAPIUtil.createOutfit(item).then(item =>
-    dispatch(receiveOutfit(item), err =>
+export const createOutfit = outfit => dispatch =>
+  OutfitAPIUtil.createOutfit(outfit).then(outfit =>
+    dispatch(receiveOutfit(outfit), err =>
       dispatch(receiveOutfitErrors(err.responseJSON))
     )
   );
