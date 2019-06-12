@@ -18,6 +18,7 @@ class OutfitCanvas extends React.Component {
     this.onMouseMove = this.onMouseMove.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSave = this.handleSave.bind(this);
+    this.dataURItoBlob = this.dataURItoBlob.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -53,7 +54,7 @@ class OutfitCanvas extends React.Component {
   renderToCanvas(ctx, imageObj) {
     let img = new Image ();
     img.crossOrigin = "Anonymous";
-    img.src = imageObj.image.src;
+    img.src = `${imageObj.image.src}?oiearbaerab`;
 
     img.onload = function() {
       ctx.drawImage(img, imageObj.x, imageObj.y, imageObj.width, imageObj.height);
@@ -133,23 +134,30 @@ class OutfitCanvas extends React.Component {
 
   handleSave(e) {
     e.preventDefault();
-
     let canvas = document.getElementById("canvas");
-    // let ctx = canvas.getContext("2d");
 
-    let image = canvas.toDataURL('png');
-    console.log(image);
-  
-  //   const formData = new FormData();
-  //   formData.append("user", this.props.user);
-  //   formData.append("title", this.state.title);
-  //   formData.append("imageURL", this.state.imageURL);
-  //   formData.append("items", this.state.itemIDs)
-  //   debugger;
+    let dataUrl = canvas.toDataURL('png');
+    let blobData = this.dataURItoBlob(dataUrl);
 
-  //   this.props.createOutfit(formData)
-  //   .then(res => this.props.history.push("/"));
+    const formData = new FormData();
+    formData.append("user", this.props.user);
+    formData.append("title", this.state.title);
+    formData.append("image", blobData);
+    formData.append("imageURL", this.state.imageURL);
+    formData.append("items", this.state.itemIDs)
+
+    this.props.createOutfit(formData)
+    .then(res => this.props.history.push("/"));
   }
+
+  dataURItoBlob(dataURI) {
+    var binary = atob(dataURI.split(',')[1]);
+    var array = [];
+    for(var i = 0; i < binary.length; i++) {
+        array.push(binary.charCodeAt(i));
+    }
+    return new Blob([new Uint8Array(array)], {type: 'image/jpeg'});
+}
 
   render() {
     const { connectDropTarget } = this.props;
