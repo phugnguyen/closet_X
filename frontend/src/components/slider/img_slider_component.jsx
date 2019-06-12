@@ -2,21 +2,22 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import OutfitContainer from "../outfit/outfit_container";
 
-class Dashboard extends React.Component {
+class SliderComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       translateDelta: 0,
       delta: 300,
-      itemsLeft: 0
+      itemsLeft: props.items.length
     };
   }
 
-  componentDidUpdate(prevProps) {
-    if (this.props.alength !== prevProps.alength) {
-      this.setState({ itemsLeft: this.props.alength - 3 });
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  //   if (this.props.items.length !== prevProps.items.length) {
+  //     this.setState({ itemsLeft: this.props.items.length - 3 });
+  //   }
+  //   console.log(this.state);
+  // }
 
   handleButton(arg) {
     const { translateDelta, delta, itemsLeft } = this.state;
@@ -62,4 +63,4 @@ class Dashboard extends React.Component {
   }
 }
 
-export default withRouter(Dashboard);
+export default withRouter(SliderComponent);
