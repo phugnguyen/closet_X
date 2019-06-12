@@ -43,8 +43,6 @@ class OutfitScrollbar extends React.Component {
   }
 
   render() {
-    console.log(this.state.itemsLeft);
-    console.log(this.props.alength);
     const renderItems = this.props.items.map(item => {
       return (
         <div>
@@ -57,7 +55,7 @@ class OutfitScrollbar extends React.Component {
     });
 
     return (
-      <div className="dashboard">
+      <div className="outfit-item-slider">
         <div className="item-slide-index">{renderItems}</div>
         <div className="dashboard-buttons">
           <button onClick={() => this.handleButton("prev")}>Left</button>

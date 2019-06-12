@@ -49,3 +49,7 @@
 .sign-out-container div:hover {
   cursor: pointer;
 }
+
+.dashboard-buttons {
+  border: 1px solid green;
+}
