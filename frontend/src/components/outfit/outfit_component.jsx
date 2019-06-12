@@ -7,7 +7,6 @@ class OutfitShow extends React.Component {
     super(props);
     this.state = {};
   }
-
   render() {
     const { imageURL, title, username } = this.props.outfit;
     const { translateDelta } = this.props;
