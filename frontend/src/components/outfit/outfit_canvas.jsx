@@ -52,7 +52,7 @@ class OutfitCanvas extends React.Component {
 
   renderToCanvas(ctx, imageObj) {
     let img = new Image ();
-    img.crossOrigin = "Anonymous";
+    // img.crossOrigin = "Anonymous";
     img.src = imageObj.image.src;
 
     img.onload = function() {

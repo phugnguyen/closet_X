@@ -43,8 +43,6 @@ class OutfitScrollbar extends React.Component {
   }
 
   render() {
-    console.log(this.state.itemsLeft);
-    console.log(this.props.alength);
     const renderItems = this.props.items.map(item => {
       return (
         <div>
