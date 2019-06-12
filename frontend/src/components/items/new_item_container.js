@@ -9,6 +9,7 @@ const mapStateToProps = state => {
       title: "",
       category: "",
       color: "",
+      prevImgURL: null,
       image: null,
       imageURL: null
     },

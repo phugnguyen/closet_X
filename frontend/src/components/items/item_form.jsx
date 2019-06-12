@@ -48,9 +48,10 @@ class ItemForm extends React.Component {
     const image = e.currentTarget.files[0];
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
+      console.log(image);
       this.setState({
         image: image,
-        imageUrl: fileReader.result
+        prevImgURL: fileReader.result
       });
     };
     if (image) {
@@ -61,7 +62,13 @@ class ItemForm extends React.Component {
   render() {
     return (
       <div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <form onSubmit={this.handleSubmit}>
+          <img className="track-img-preview" src={this.state.prevImgURL} />
           <input type="file" onChange={this.handleImageFile} />
           <input
             type="text"
