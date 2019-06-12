@@ -35,7 +35,7 @@ class ItemSliderShow extends React.Component {
         className="outfit-item"
         style={{ transform: `translateY(${translateDelta}%)` }}
       >
-        <div className="item-img-div">
+        <div className="outfit-item-img-div">
           <img className="item-img" src={imageURL} alt="" />
         </div>
         <div>Title: {title}</div>

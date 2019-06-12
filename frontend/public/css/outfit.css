@@ -8,17 +8,20 @@
 .canvas-container {
   width: 70%;
   min-width: 600px;
-  min-height: 600px;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  overflow: hidden;
-
+  overflow: auto;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
 }
 
 canvas {
   border: 3px solid black;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .outfit-items-scrollbar {
@@ -27,13 +30,11 @@ canvas {
   justify-content: space-around;
   align-items: center;
   width: 30%;
-  border: 1px solid red;
 }
 
 .outfit-create-options {
   height: 50px;
   width: 100%;
-  border: 1px solid red;
 }
 
 .test-div {
@@ -42,26 +43,54 @@ canvas {
 }
 
 .outfit-create-options {
+  height: 100%;
+  height: 60px;
   display: flex;
   justify-content: space-around;
+  align-items: flex-end;
+  padding-bottom: 50px;
 }
 
 .outfit-create-options input {
   width: 50%;
+  height: 20px;
 }
 
 .outfit-button-container {
   width: 30%;
-  height: 100%;
+  /* height: 10%; */
   display: flex;
   justify-content: space-around;
-  border: 1px solid green;
+  align-items: flex-end;
 }
+
+/* .outfit-button-container button {
+  display: flex;
+  align-self: flex-end;
+} */
 
 .outfit-item-slider {
   height: 100%;
   width: 100%;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
-  border: 1px solid green;
+  align-items: center;
+}
+
+.item-scroll-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.canvas-header {
+  height: 100px;
+}
+
+.outfit-item-img-div {
+  width: 300px;
+  height: 33.33%;
+  margin-bottom: 10px;
 }

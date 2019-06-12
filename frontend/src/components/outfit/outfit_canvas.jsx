@@ -52,7 +52,7 @@ class OutfitCanvas extends React.Component {
 
   renderToCanvas(ctx, imageObj) {
     let img = new Image ();
-    // img.crossOrigin = "Anonymous";
+    img.crossOrigin = "Anonymous";
     img.src = imageObj.image.src;
 
     img.onload = function() {
@@ -153,9 +153,9 @@ class OutfitCanvas extends React.Component {
 
   render() {
     const { connectDropTarget } = this.props;
-    let className = null;
     return connectDropTarget(
-      <div className={`canvas-container ${className}`}>
+      <div className="canvas-container">
+        <div className="canvas-header"></div>
         <canvas
           id="canvas"
           onClick={this.handleCanvasClick}

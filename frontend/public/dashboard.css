@@ -24,6 +24,7 @@
 .outfit-item {
   flex: 0 0 33.7%;
   transition: transform 1500ms ease 100ms;
+  margin-bottom: 15px;
 }
 
 /* .outfit-index:hover .outfit-item {
@@ -51,5 +52,9 @@
 }
 
 .dashboard-buttons {
-  border: 1px solid green;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  align-self: flex-end;
 }
