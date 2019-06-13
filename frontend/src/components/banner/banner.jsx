@@ -10,7 +10,8 @@ class Banner extends React.Component {
   render() {
     return (
       <div className="user-banner">
-        CLOSET-X
+        <div>CLOSET-X</div>
+        <div onClick={this.props.logout}>sign out</div>
       </div>
     )
   }

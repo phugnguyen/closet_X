@@ -163,7 +163,7 @@ class OutfitCanvas extends React.Component {
     const { connectDropTarget } = this.props;
     return connectDropTarget(
       <div className="canvas-container">
-        <div className="canvas-header"></div>
+        <div className="canvas-header">Plan an outfit</div>
         <canvas
           id="canvas"
           onClick={this.handleCanvasClick}

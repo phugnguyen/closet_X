@@ -20,7 +20,7 @@
 
 canvas {
   border: 3px solid black;
-  margin-top: 50px;
+  margin-top: 25px;
   margin-bottom: 50px;
 }
 
@@ -87,6 +87,8 @@ canvas {
 
 .canvas-header {
   height: 100px;
+  margin-top: 25px;
+  font-size: 36px;
 }
 
 .outfit-item-img-div {

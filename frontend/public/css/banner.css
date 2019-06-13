@@ -2,8 +2,17 @@
   position: absolute;
   width: 100%;
   height: 50px;
-  text-align: center;
-  vertical-align: middle;
   color: white;
   background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-banner div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 75px;
+  margin-right: 75px;
 }
