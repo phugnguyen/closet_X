@@ -14,13 +14,9 @@ class NavBar extends React.Component {
   
         </div>
         <div className="nav-bar-item-container">
-          <ul>
-            <li>Dashboard</li>
-            <li>Your closet</li>
-            <li><Link to="/upload">Upload</Link></li>
-            <li></li>
-            <li></li>
-          </ul>
+            <div><Link to="/dashboard">Dashboard</Link></div>
+            <div><Link to="/outfits/new">Your closet</Link></div>
+            <div><Link to="/upload">Add Item</Link></div>
         </div>
         <div className="sign-out-container">
           <div onClick={this.props.logout}>Sign Out</div>

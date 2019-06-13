@@ -15,3 +15,15 @@
 .nav-bar-item-container {
   height: 70%;
 }
+
+.nav-bar-item-container a {
+  text-decoration: none;
+}
+
+.nav-bar-item-container a:visited {
+  color: black;
+}
+
+.nav-bar-item-container a:hover {
+  color: gray;
+}
