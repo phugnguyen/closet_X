@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { createItem } from "../../actions/item_actions";
 import ItemForm from "./item_form";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
     item: {
       user: state.session.user.id,
