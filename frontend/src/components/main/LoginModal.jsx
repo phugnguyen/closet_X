@@ -1,6 +1,6 @@
 //MODAL DESIGN INSPIRED BY: https://codepen.io/alligatorio/pen/aYzMKL
 
-import React from 'react';
+import React from "react";
 
 class LoginModal extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class LoginModal extends React.Component {
       username: "",
       email: "",
       password: ""
-    }
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
     this.handleDemoLogin = this.handleDemoLogin.bind(this);
@@ -19,23 +19,23 @@ class LoginModal extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.currentUser === true) {
       this.props.hideLoginModal();
-      this.props.history.push('/dashboard');
+      this.props.history.push("/dashboard");
     }
 
-    this.setState({errors: nextProps.errors})
+    this.setState({ errors: nextProps.errors });
   }
 
   handleInput(type) {
-    return (e) => this.setState({ [type]: e.target.value })
+    return e => this.setState({ [type]: e.target.value });
   }
-  
+
   handleSubmit(e) {
     e.preventDefault();
     let user = {
       email: this.state.email,
       password: this.state.password
-    }
-    this.props.login(user)
+    };
+    this.props.login(user);
   }
 
   handleDemoLogin(e) {
@@ -43,7 +43,7 @@ class LoginModal extends React.Component {
     let user = {
       email: "guest@email.com",
       password: "password"
-    }
+    };
     this.props.login(user);
   }
 
@@ -51,36 +51,41 @@ class LoginModal extends React.Component {
     return (
       <ul>
         {Object.keys(this.props.errors).map((error, i) => (
-          <li key={`error-${i}`}>
-            {this.props.errors[error]}
-          </li>
+          <li key={`error-${i}`}>{this.props.errors[error]}</li>
         ))}
       </ul>
     );
   }
 
   render() {
-    const showHideClassName = this.props.show ? 'login-modal-background display-block' : 'login-modal-background display-none';
+    const showHideClassName = this.props.show
+      ? "login-modal-background display-block"
+      : "login-modal-background display-none";
 
     return (
       <div className={showHideClassName}>
-        <div className='modal-subcontainer'>
-          <div className={'login-form-container'}>
-            <div className='login-form-header'>Login!</div>
-            <br/>
+        <div className="modal-subcontainer">
+          <div className={"login-form-container"}>
+            <div className="login-form-header">Login!</div>
+            <br />
             <form onSubmit={this.handleSubmit}>
-              <label>Email:
-                <br/>
-                <input type="text" onChange={this.handleInput('email')}/>
+              <label>
+                Email:
+                <br />
+                <input type="text" onChange={this.handleInput("email")} />
               </label>
-              <br/>
-              <label>Password: 
-                <br/>
-                <input type="password" onChange={this.handleInput('password')}/>
+              <br />
+              <label>
+                Password:
+                <br />
+                <input
+                  type="password"
+                  onChange={this.handleInput("password")}
+                />
               </label>
-              <br/>
+              <br />
               <button onClick={this.handleSubmit}>Log In</button>
-              <br/>
+              <br />
               <button onClick={this.handleDemoLogin}>Demo Log In</button>
               {this.renderErrors()}
             </form>
@@ -89,6 +94,6 @@ class LoginModal extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default LoginModal;
