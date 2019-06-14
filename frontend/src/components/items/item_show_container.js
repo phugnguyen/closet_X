@@ -4,7 +4,6 @@ import ItemShow from "./item_show";
 
 const mapStateToProps = (state, ownProps) => {
   if (!ownProps.itemId) {
-    console.log("hehe?");
     return {};
   }
   return {

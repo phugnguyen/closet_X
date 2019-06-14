@@ -1,6 +1,6 @@
-import { connect } from 'react-redux';
-import { signup } from '../../actions/session_actions';
-import SignupModal from './SignupModal';
+import { connect } from "react-redux";
+import { signup } from "../../actions/session_actions";
+import SignupModal from "./SignupModal";
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -10,12 +10,11 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     signup: user => dispatch(signup(user))
-    // signup: user => console.log('Tried to signup user: ', user)
-  }
-}
+  };
+};
 
 export default connect(
   mapStateToProps,

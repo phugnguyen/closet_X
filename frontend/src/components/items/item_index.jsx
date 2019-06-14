@@ -18,8 +18,6 @@ class ItemIndex extends React.Component {
     this.hideItemShowModal = this.hideItemShowModal.bind(this);
   }
 
-  // getImageItemId() {}
-
   showNewItemModal() {
     this.setState({ showNewItemModal: true });
     document.addEventListener("click", this.hideNewItemModal, false);

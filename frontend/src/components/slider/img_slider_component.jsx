@@ -12,13 +12,6 @@ class SliderComponent extends React.Component {
     };
   }
 
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.items.length !== prevProps.items.length) {
-  //     this.setState({ itemsLeft: this.props.items.length - 3 });
-  //   }
-  //   console.log(this.state);
-  // }
-
   handleButton(arg) {
     const { translateDelta, delta, itemsLeft } = this.state;
 
@@ -40,8 +33,6 @@ class SliderComponent extends React.Component {
   }
 
   render() {
-    console.log(this.state.itemsLeft);
-    console.log(this.props.alength);
     const renderItems = this.props.items.map(item => {
       return (
         <OutfitContainer
