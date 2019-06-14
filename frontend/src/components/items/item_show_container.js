@@ -3,10 +3,11 @@ import { fetchItem } from "../../actions/item_actions";
 import ItemShow from "./item_show";
 
 const mapStateToProps = (state, ownProps) => {
-  debugger;
-
+  if (!ownProps.itemId) {
+    return {};
+  }
   return {
-    item: state.entities.items[ownProps.match.params.itemId]
+    item: state.entities.items[ownProps.itemId]
   };
 };
 
