@@ -121,8 +121,18 @@ form input {
   flex-direction: column;
 }
 
+input, select {
+  font-family: 'Dosis', sans-serif;
+}
+
+select {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .new-form-container form img {
   height: 500px;
   width: 500px;
   border: 2px solid black;
+  margin-bottom: 10px;
 }

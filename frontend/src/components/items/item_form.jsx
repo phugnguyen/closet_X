@@ -71,12 +71,13 @@ class ItemForm extends React.Component {
             <form onSubmit={this.handleSubmit}>
               <img className="track-img-preview" src={this.state.prevImgURL} />
               <input type="file" onChange={this.handleImageFile} />
-              <input
-                type="text"
-                value={this.state.title}
-                onChange={this.update("title")}
-              />
-              <br />
+              <label>Item Name: <br/>
+                <input
+                  type="text"
+                  value={this.state.title}
+                  onChange={this.update("title")}
+                />
+              </label>
               <select
                 onChange={this.update("category")}
                 value={this.state.category}
