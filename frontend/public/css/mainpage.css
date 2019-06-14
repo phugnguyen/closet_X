@@ -37,7 +37,7 @@ button {
   height: 100%;
 }
 
-.login-modal-background, .signup-modal-background, .new-item-modal-background {
+.login-modal-background, .signup-modal-background, .new-item-modal-background, .show-modal-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -47,6 +47,35 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.show-item-container {
+  width: 700px;
+  height: 700px;
+  background-color: rgba(0, 0, 0, 0.0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-item-contents {
+  height: auto;
+  width: auto;
+  color: white;
+  font-size: 36px;
+  max-width: 600px;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#show-image {
+  height: auto;
+  width: auto;
+  max-width: 600px;
+  max-height: 600px;
 }
 
 .modal-subcontainer {
@@ -70,6 +99,10 @@ button {
 
 .display-block {
   display: block;
+}
+
+.display-flex {
+  display: flex;
 }
 
 .display-none {

@@ -9,17 +9,19 @@ class ItemShow extends React.Component {
 
   render() {
     const showHideClassName = this.props.show
-      ? "login-modal-background display-block"
-      : "login-modal-background display-none";
+      ? "show-modal-background display-flex"
+      : "show-modal-background display-none";
     if (!this.props.item) {
       return null;
     }
     return (
       <>
         <div className={showHideClassName}>
-          <div className="new_form_container">
-            <div>{this.props.item.title}</div>
-            <img src={this.props.item.imageURL} />
+          <div className="show-item-container">
+            <div className="show-item-contents">
+              <div>{this.props.item.title}</div>
+              <img src={this.props.item.imageURL} id="show-image"/>
+            </div>
           </div>
         </div>
       </>

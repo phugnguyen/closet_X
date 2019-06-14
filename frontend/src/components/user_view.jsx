@@ -5,6 +5,7 @@ import Banner from "./banner/banner_container"
 import DashboardContainer from "./dashboard/dashboard_container";
 import NewItemContainer from "./items/new_item_container";
 import OutfitCreate from "./outfit/outfit_create";
+import ItemIndexContainer from "../components/items/item_index_container"
 
 const UserView = () => {
   return (
@@ -12,6 +13,7 @@ const UserView = () => {
       <Banner />
       <NavBarContainer />
       <Switch>
+        <Route path="/itemindex" component={ItemIndexContainer} />
         <Route path="/dashboard" component={DashboardContainer} />
         <Route path="/upload" component={NewItemContainer} />
         <Route path="/outfits/new" component={OutfitCreate} />
