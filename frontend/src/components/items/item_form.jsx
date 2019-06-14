@@ -48,7 +48,6 @@ class ItemForm extends React.Component {
     const image = e.currentTarget.files[0];
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
-      console.log(image);
       this.setState({
         image: image,
         prevImgURL: fileReader.result
