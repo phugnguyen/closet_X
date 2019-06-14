@@ -37,7 +37,7 @@ button {
   height: 100%;
 }
 
-.login-modal-background, .signup-modal-background {
+.login-modal-background, .signup-modal-background, .new-item-modal-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -58,7 +58,7 @@ button {
   align-items: center;
 }
 
-.login-form-container, .signup-form-container {
+.login-form-container, .signup-form-container, .new-form-container {
   background: white;
   padding: 20px;
   width: fit-content;
@@ -114,5 +114,25 @@ form input {
   height: 100%;
   width: 100%;
   display: flex;
-  
+}
+
+.new-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, select {
+  font-family: 'Dosis', sans-serif;
+}
+
+select {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.new-form-container form img {
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+  margin-bottom: 10px;
 }

@@ -19,7 +19,7 @@ class ItemIndex extends React.Component {
   }
 
   hideNewItemModal(e) {
-    let spot = document.querySelector(".new_form_container");
+    let spot = document.querySelector(".new-form-container");
     if (spot && spot.contains(e.target)) {
       return;
     }
