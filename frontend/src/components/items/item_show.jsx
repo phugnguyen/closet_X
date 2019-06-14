@@ -2,8 +2,8 @@ import React from "react";
 
 class ItemShow extends React.Component {
   componentDidMount() {
-    if (this.props.match) {
-      this.props.fetchItem(this.props.match.params.itemId);
+    if (this.props.itemId) {
+      this.props.fetchItem(this.props.itemId);
     }
   }
 
@@ -13,7 +13,6 @@ class ItemShow extends React.Component {
     }
     return (
       <>
-        gffytfufyiygiyf
         <div>{this.props.item.title}</div>
         <img src={this.props.item.imageURL} />
       </>

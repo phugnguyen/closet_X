@@ -17,6 +17,8 @@ class ItemIndex extends React.Component {
     this.hideNewItemModal = this.hideNewItemModal.bind(this);
   }
 
+  // getImageItemId() {}
+
   showNewItemModal() {
     this.setState({ showNewItemModal: true });
     document.addEventListener("click", this.hideNewItemModal, false);
@@ -26,7 +28,7 @@ class ItemIndex extends React.Component {
     this.setState({ itemShowModal: true, modal: id }, () =>
       console.log(this.state)
     );
-    // document.addEventListener("click", this.itemShowModal, false);
+    document.addEventListener("click", this.hideItemShowModal, false);
   }
 
   hideNewItemModal(e) {
@@ -38,6 +40,15 @@ class ItemIndex extends React.Component {
     document.removeEventListener("click", this.hideNewItemModal);
   }
 
+  hideItemShowModal(e) {
+    let spot = document.querySelector(".new_form_container");
+    if (spot && spot.contains(e.target)) {
+      return;
+    }
+    this.setState({ itemShowModal: false });
+    document.removeEventListener("click", this.hideItemShowModal);
+  }
+
   componentDidMount() {
     this.props.fetchAllItems();
   }
@@ -47,7 +58,9 @@ class ItemIndex extends React.Component {
       <ItemIndexEach itemShowModal={this.itemShowModal} item={item} />
     ));
     let modal = this.state.itemShowModal ? (
-      <ItemShowContainer itemId={this.state.modal} />
+      <div className=".new_form_container">
+        <ItemShowContainer itemId={this.state.modal} />
+      </div>
     ) : (
       <></>
     );
