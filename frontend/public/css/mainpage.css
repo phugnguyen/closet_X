@@ -116,6 +116,11 @@ form input {
   display: flex;
 }
 
+.new-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
 .new-form-container form img {
   height: 500px;
   width: 500px;
