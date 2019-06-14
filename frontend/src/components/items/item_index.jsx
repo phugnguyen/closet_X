@@ -55,27 +55,28 @@ class ItemIndex extends React.Component {
       <ItemIndexEach itemShowModal={this.itemShowModal} item={item} />
     ));
     let modal = this.state.itemShowModal ? (
-      <div>
+      // <div>
         <ItemShowContainer
           show={this.state.itemShowModal}
           hideItemShowModal={this.hideItemShowModal}
           itemId={this.state.modal}
         />
-      </div>
+      // </div>
     ) : (
       <></>
     );
     return (
-      <>
+      <div className="item-index-container">
         {modal}
         <span onClick={this.showNewItemModal}>Add Item</span>
         <ItemFormContainer
           show={this.state.showNewItemModal}
           hideNewItemModal={this.hideNewItemModal}
         />
-
-        {items}
-      </>
+        <div className="item-index-items-container">
+          {items}
+        </div>
+      </div>
     );
   }
 }

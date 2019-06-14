@@ -1,0 +1,33 @@
+.item-index-container {
+  width: calc(100vw - 230px);
+  height: 100vh;
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+
+.item-index-items-container {
+  /* margin-top: 1500px; */
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+}
+
+.item-index-item-container {
+  height: 250px;
+  width: 250px;
+  margin: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-index-item {
+  height: auto;
+  width: auto;
+  max-height: 250px;
+  max-width: 250px;
+  margin: 10px 10px;
+}

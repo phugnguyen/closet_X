@@ -15,7 +15,7 @@ class NavBar extends React.Component {
         </div>
         <div className="nav-bar-item-container">
             <div><Link to="/dashboard">Dashboard</Link></div>
-            <div><Link to="/outfits/new">Your closet</Link></div>
+            <div><Link to="/itemindex">Your closet</Link></div>
             <div><Link to="/upload">Add Item</Link></div>
         </div>
         <div className="sign-out-container">
