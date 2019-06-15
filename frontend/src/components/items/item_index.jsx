@@ -68,7 +68,6 @@ class ItemIndex extends React.Component {
     return (
       <div className="item-index-container">
         {modal}
-        <span onClick={this.showNewItemModal}>Add Item</span>
         <ItemFormContainer
           show={this.state.showNewItemModal}
           hideNewItemModal={this.hideNewItemModal}
@@ -76,6 +75,7 @@ class ItemIndex extends React.Component {
         <div className="item-index-items-container">
           {items}
         </div>
+        <p id="modal-text" className="display-none" onClick={this.showNewItemModal}>Click Me!</p>
       </div>
     );
   }

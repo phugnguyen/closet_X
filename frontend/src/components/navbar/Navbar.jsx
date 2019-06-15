@@ -7,7 +7,13 @@ class NavBar extends React.Component {
     this.state = {};
   }
 
+  handleClick() {
+    let clicker = document.getElementById("modal-text");
+    clicker.click();
+  }
+
   render() {
+    console.log(this.props);
     return (
       <div className="nav-bar">
         <div className="nav-bar-logo">
@@ -15,8 +21,9 @@ class NavBar extends React.Component {
         </div>
         <div className="nav-bar-item-container">
             <div><Link to="/dashboard">Dashboard</Link></div>
-            <div><Link to="/itemindex">Your closet</Link></div>
-            <div><Link to="/upload">Add Item</Link></div>
+            <div><Link to="/closet">Your closet</Link></div>
+            {this.props.match.params[0] === "closet" ? <div><Link onClick={this.handleClick}> &nbsp; • &nbsp; Add Item</Link></div> : null}
+            {this.props.match.params[0] === "closet" ? <div><Link to="/outfits/new"> &nbsp; • &nbsp; Add Outfit</Link></div> : null}
         </div>
         <div className="sign-out-container">
           <div onClick={this.props.logout}>Sign Out</div>

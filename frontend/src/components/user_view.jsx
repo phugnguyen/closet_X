@@ -13,7 +13,7 @@ const UserView = () => {
       <Banner />
       <NavBarContainer />
       <Switch>
-        <Route path="/itemindex" component={ItemIndexContainer} />
+        <Route path="/closet" component={ItemIndexContainer} />
         <Route path="/dashboard" component={DashboardContainer} />
         <Route path="/upload" component={NewItemContainer} />
         <Route path="/outfits/new" component={OutfitCreate} />
