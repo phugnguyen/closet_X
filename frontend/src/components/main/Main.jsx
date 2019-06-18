@@ -53,7 +53,7 @@ class Main extends React.Component {
             <div className="container">
               {/* <!-- Logo --> */}
               <h1 id="logo">
-                <a href="#">Closet X</a>
+                <div>Closet X</div>
               </h1>
               <p>
                 An interactive and responsive online closet. Create and share
