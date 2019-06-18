@@ -17,7 +17,7 @@
 .outfit-index {
   display: flex;
   overflow: hidden;
-  padding: 100px 0 100px 0;
+  /* padding: 100px 0 100px 0; */
 }
 
 .outfit-item {
@@ -56,4 +56,10 @@
   justify-content: space-around;
   align-items: flex-end;
   align-self: flex-end;
+}
+
+.user-body {
+  display: flex;
+  margin-top: 50px;
+  width: 100%;
 }

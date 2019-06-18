@@ -19,13 +19,13 @@ class Dashboard extends React.Component {
           title: "SecretaryKim",
           username: "Vice Chairman",
           imageURL:
-            "http://d263ao8qih4miy.cloudfront.net/wp-content/uploads/2018/06/SecretaryKim05-00250.jpg"
+            "https://seoulbeats.com/wp-content/uploads/2018/07/20180705_seoulbeats_whatswrongwithsecretarykim.jpg"
         },
         {
           title: "SecretaryKim",
           username: "Vice Chairman",
           imageURL:
-            "http://d263ao8qih4miy.cloudfront.net/wp-content/uploads/2018/06/SecretaryKim05-00232.jpg"
+            "https://seoulbeats.com/wp-content/uploads/2018/07/20180705_seoulbeats_whatswrongwithsecretarykim.jpg"
         }
       );
     }

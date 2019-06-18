@@ -46,8 +46,8 @@ class SliderComponent extends React.Component {
       <div className="img-slider">
         <div className="outfit-index">{renderItems}</div>
         <div className="dashboard-buttons">
-          <button onClick={() => this.handleButton("prev")}>Left</button>
-          <button onClick={() => this.handleButton("next")}>Right</button>
+          <button onClick={() => this.handleButton("prev")}>LEFT</button>
+          <button onClick={() => this.handleButton("next")}>>>></button>
         </div>
       </div>
     );
