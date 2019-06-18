@@ -53,7 +53,7 @@ class Main extends React.Component {
             <div className="container">
               {/* <!-- Logo --> */}
               <h1 id="logo">
-                <a href="index.html">Closet X</a>
+                <a href="#">Closet X</a>
               </h1>
               <p>
                 An interactive and responsive online closet. Create and share
@@ -64,27 +64,13 @@ class Main extends React.Component {
               <nav id="nav">
                 <ul>
                   <li>
-                    <a className="icon solid fa-home" href="index.html">
-                      <span>Introduction</span>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a className="icon solid fa-cog" href="left-sidebar.html">
-                      <span>Left Sidebar</span>
+                    <a className="icon solid fa-retweet" href="#">
+                      <span onClick={this.showLoginModal}>Login</span>
                     </a>
                   </li>
                   <li>
-                    <a
-                      className="icon solid fa-retweet"
-                      href="right-sidebar.html"
-                    >
-                      <span>Login</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="icon solid fa-sitemap" href="no-sidebar.html">
-                      <span>Signup</span>
+                    <a className="icon solid fa-sitemap" href="#">
+                      <span onClick={this.showSignupModal}>Signup</span>
                     </a>
                   </li>
                 </ul>
@@ -286,18 +272,6 @@ class Main extends React.Component {
                     <div className="row">
                       <div className="col-6 col-12-small">
                         <ul className="icons">
-                          {/* <!-- <li className="icon solid fa-home">
-                            825 Battery Street<br />
-                            San Francisco, CA 94111
-                        <br />
-                            USA
-                      </li>
-                          <li className="icon solid fa-phone">
-                            (000) 000-0000
-                      </li>
-                          <li className="icon solid fa-envelope">
-                            <a href="#">info@untitled.tld</a>
-                          </li> --> */}
                           <li className="icon brands fa-github">
                             <a
                               href="https://github.com/phugnguyen/closet_X"
