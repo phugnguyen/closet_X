@@ -1881,9 +1881,9 @@ input, select, textarea {
 			line-height: inherit;
 		}
 
-		.icon > .label {
+		/* .icon > .label {
 			display: none;
-		}
+		} */
 
 		.icon.solid:before {
 			font-weight: 900;
@@ -1994,9 +1994,9 @@ input, select, textarea {
 					letter-spacing: 3px;
 				}
 
-			#nav > ul > li > ul {
+			/* #nav > ul > li > ul {
 				display: none;
-			}
+			} */
 
 			#nav > ul > li.active > a:before,
 			#nav > ul > li:hover > a:before {
@@ -2261,9 +2261,9 @@ input, select, textarea {
 				font-size: 12pt;
 			}
 
-			h2 br, h3 br, h4 br, h5 br, h6 br {
+			/* h2 br, h3 br, h4 br, h5 br, h6 br {
 				display: none;
-			}
+			} */
 
 		/* Image */
 
@@ -2307,9 +2307,9 @@ input, select, textarea {
 					padding: 0 4em;
 				}
 
-					#banner > .container br {
+					/* #banner > .container br {
 						display: none;
-					}
+					} */
 
 		/* Main */
 
@@ -2334,9 +2334,9 @@ input, select, textarea {
 
 /* Medium */
 
-	#navPanel, #titleBar {
+	/* #navPanel, #titleBar {
 		display: none;
-	}
+	} */
 
 	@media screen and (max-width: 980px) {
 
@@ -2354,9 +2354,9 @@ input, select, textarea {
 
 		/* Nav */
 
-			#nav {
+			/* #nav {
 				display: none;
-			}
+			} */
 
 		/* Nav */
 
@@ -2561,9 +2561,9 @@ input, select, textarea {
 				margin: 0 0 1em 0;
 			}
 
-				h2 br, h3 br, h4 br, h5 br, h6 br {
+				/* h2 br, h3 br, h4 br, h5 br, h6 br {
 					display: none;
-				}
+				} */
 
 		/* Image */
 
@@ -2636,9 +2636,9 @@ input, select, textarea {
 					padding: 0;
 				}
 
-					#banner > .container:before, #banner > .container:after {
+					/* #banner > .container:before, #banner > .container:after {
 						display: none;
-					}
+					} */
 
 				#banner p {
 					font-size: 1.25em;

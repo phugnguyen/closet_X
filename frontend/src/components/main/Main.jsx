@@ -64,7 +64,7 @@ class Main extends React.Component {
               <nav id="nav">
                 <ul>
                   <li>
-                    <a className="icon solid fa-retweet" href="#">
+                    <a className="icon solid fa-user" href="#">
                       <span onClick={this.showLoginModal}>Login</span>
                     </a>
                   </li>
@@ -151,7 +151,11 @@ class Main extends React.Component {
                 <div className="col-12">
                   <ul className="actions">
                     <li>
-                      <a href="#" className="button icon solid fa-file">
+                      <a
+                        onClick={this.showSignupModal}
+                        href="#"
+                        className="button icon solid fa-file"
+                      >
                         Signup Today!
                       </a>
                     </li>
@@ -214,7 +218,11 @@ class Main extends React.Component {
                 <div className="col-12">
                   <ul className="actions">
                     <li>
-                      <a href="#" className="button icon solid fa-file">
+                      <a
+                        onClick={this.showSignupModal}
+                        href="#"
+                        className="button icon solid fa-file"
+                      >
                         Signup Today!
                       </a>
                     </li>
