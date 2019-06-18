@@ -151,13 +151,13 @@ class Main extends React.Component {
                 <div className="col-12">
                   <ul className="actions">
                     <li>
-                      <a
+                      <div
                         onClick={this.showSignupModal}
                         href="#"
-                        className="button icon solid fa-file"
+                        className="button icon solid fa-sitemap"
                       >
                         Signup Today!
-                      </a>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -218,13 +218,13 @@ class Main extends React.Component {
                 <div className="col-12">
                   <ul className="actions">
                     <li>
-                      <a
+                      <div
                         onClick={this.showSignupModal}
                         href="#"
-                        className="button icon solid fa-file"
+                        className="button icon solid fa-sitemap"
                       >
                         Signup Today!
-                      </a>
+                      </div>
                     </li>
                   </ul>
                 </div>
