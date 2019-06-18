@@ -45,7 +45,7 @@ router.post("/", upload.single("image"), (req, res) => {
 // upload.single("image")
 
 router.post("/update/:itemId", upload.single("image"), (req, res) => {
-  debugger;
+  // debugger;
   let imageURL;
   if (req.file) {
     imageURL = req.file.location;

@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
   height: 100%;
   width: 100%;
 }
@@ -12,14 +12,14 @@ body {
 button {
   color: white;
   background-color: black;
-  font-size: .75em;
-  letter-spacing: .55px;
+  font-size: 0.75em;
+  letter-spacing: 0.55px;
   padding: 0 0;
   font-weight: 400;
   height: 30px;
   width: 125px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  /* margin-top: 15px; */
+  /* margin-bottom: 15px; */
   align-self: center;
   transition-duration: 0.5s;
   border: none;
@@ -37,7 +37,10 @@ button {
   height: 100%;
 }
 
-.login-modal-background, .signup-modal-background, .new-item-modal-background, .show-modal-background {
+.login-modal-background,
+.signup-modal-background,
+.new-item-modal-background,
+.show-modal-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -52,7 +55,7 @@ button {
 .show-item-container {
   width: 700px;
   height: 700px;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +90,9 @@ button {
   align-items: center;
 }
 
-.login-form-container, .signup-form-container, .new-form-container {
+.login-form-container,
+.signup-form-container,
+.new-form-container {
   background: white;
   padding: 20px;
   width: fit-content;
@@ -134,13 +139,10 @@ button {
   cursor: pointer;
 }
 
-.signup-form-header, .login-form-header {
+.signup-form-header,
+.login-form-header {
   font-size: 30px;
   font-weight: 600;
-}
-
-form input {
-  margin-bottom: 10px;
 }
 
 .user-view {
@@ -154,8 +156,9 @@ form input {
   flex-direction: column;
 }
 
-input, select {
-  font-family: 'Dosis', sans-serif;
+input,
+select {
+  font-family: "Dosis", sans-serif;
 }
 
 select {
@@ -168,4 +171,9 @@ select {
   width: 500px;
   border: 2px solid black;
   margin-bottom: 10px;
+}
+
+.login-buttons {
+  display: flex;
+  justify-content: space-evenly;
 }
