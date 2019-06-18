@@ -1,6 +1,6 @@
 .dashboard {
   height: 100%;
-  width: 100%;
+  width: 85%;
   display: flex;
   flex-direction: column;
 }
@@ -17,13 +17,12 @@
 .outfit-index {
   display: flex;
   overflow: hidden;
-  /* padding: 100px 0 100px 0; */
+  width: 100%;
 }
 
 .outfit-item {
   flex: 0 0 33.7%;
   transition: transform 1500ms ease 100ms;
-  margin-bottom: 15px;
 }
 
 /* .outfit-index:hover .outfit-item {
@@ -51,7 +50,6 @@
 }
 
 .dashboard-buttons {
-  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -61,5 +59,9 @@
 .user-body {
   display: flex;
   margin-top: 50px;
+  width: 100%;
+}
+
+.image-slider {
   width: 100%;
 }

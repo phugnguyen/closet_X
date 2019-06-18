@@ -1,5 +1,5 @@
 .nav-bar {
-  width: 230px;
+  min-width: 15%;
   display: flex;
   flex-direction: column;
   border-right: 1px solid black;
