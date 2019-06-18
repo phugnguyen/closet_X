@@ -83,12 +83,11 @@ class LoginModal extends React.Component {
                   onChange={this.handleInput("password")}
                 />
               </label>
+              <br />
               <div className="login-buttons">
                 <button onClick={this.handleSubmit}>Log In</button>
-                <button onClick={this.handleDemoLogin}>Demo Log In</button>
+                <button onClick={this.handleDemoLogin}>Demo Login</button>
               </div>
-
-              <br />
 
               {this.renderErrors()}
             </form>
