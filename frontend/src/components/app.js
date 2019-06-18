@@ -12,7 +12,8 @@ import UserView from "./user_view";
 
 const App = () => (
   <Switch>
-    <ProtectedRoute
+    {/* <ProtectedRoute */}
+    <Route
       path="/(dashboard|closet|outfits|upload|itemindex)"
       component={UserView}
     />
