@@ -102,7 +102,7 @@ class Main extends React.Component {
                   {/* <!-- Feature --> */}
                   <section>
                     <a href="#" className="image featured">
-                      <img src="images/pic01.jpg" alt="" />
+                      <img src="images/splash-1.jpg" alt="" />
                     </a>
                     <header>
                       <h3>Okay, so what is this?</h3>
@@ -117,7 +117,7 @@ class Main extends React.Component {
                   {/* <!-- Feature --> */}
                   <section>
                     <a href="#" className="image featured">
-                      <img src="images/pic02.jpg" alt="" />
+                      <img src="images/splash-2.jpg" alt="" />
                     </a>
                     <header>
                       <h3>Nice! What's the point?</h3>
@@ -134,7 +134,7 @@ class Main extends React.Component {
                   {/* <!-- Feature --> */}
                   <section>
                     <a href="#" className="image featured">
-                      <img src="images/pic03.jpg" alt="" />
+                      <img src="images/splash-3.jpg" alt="" />
                     </a>
                     <header>
                       <h3>What's this built with?</h3>
@@ -177,7 +177,7 @@ class Main extends React.Component {
                   {/* <!-- Feature --> */}
                   <section>
                     <a href="#" className="image featured">
-                      <img src="images/pic01.jpg" alt="" />
+                      <img src="/images/splash-4.jpg" alt="" />
                     </a>
                     <header>
                       <h3>
@@ -191,7 +191,7 @@ class Main extends React.Component {
                   {/* <!-- Feature --> */}
                   <section>
                     <a href="#" className="image featured">
-                      <img src="images/pic02.jpg" alt="" />
+                      <img src="images/splash-5.jpg" alt="" />
                     </a>
                     <header>
                       <h3>
@@ -205,7 +205,7 @@ class Main extends React.Component {
                   {/* <!-- Feature --> */}
                   <section>
                     <a href="#" className="image featured">
-                      <img src="images/pic03.jpg" alt="" />
+                      <img src="images/splash-6.jpg" alt="" />
                     </a>
                     <header>
                       <h3>
