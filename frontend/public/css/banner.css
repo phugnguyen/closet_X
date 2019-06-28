@@ -16,3 +16,7 @@
   margin-left: 75px;
   margin-right: 75px;
 }
+
+.banner-sign-out:hover {
+  cursor: pointer;
+}
