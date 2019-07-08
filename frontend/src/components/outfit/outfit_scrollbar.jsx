@@ -6,8 +6,8 @@ class OutfitScrollbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      translateDelta: -50,
-      delta: 205,
+      translateDelta: 0,
+      delta: 300,
       itemsLeft: 0
     };
   }
@@ -45,12 +45,10 @@ class OutfitScrollbar extends React.Component {
   render() {
     const renderItems = this.props.items.map(item => {
       return (
-        <div>
           <ItemSliderShow
             item={item}
             translateDelta={this.state.translateDelta}
           />
-        </div>
       );
     });
 
@@ -58,9 +56,9 @@ class OutfitScrollbar extends React.Component {
       <div className="outfit-item-slider">
         <div className="item-scroll-header">Items</div>
         <div className="item-slide-index">{renderItems}</div>
-        <div className="dashboard-buttons">
-          <button onClick={() => this.handleButton("prev")}>Up</button>
-          <button onClick={() => this.handleButton("next")}>Down</button>
+        <div className="dashboard-buttons-vert">
+          <button onClick={() => this.handleButton("prev")}>&and;</button>
+          <button onClick={() => this.handleButton("next")}>&or;</button>
         </div>
       </div>
     );

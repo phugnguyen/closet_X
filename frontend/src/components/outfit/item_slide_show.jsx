@@ -32,13 +32,13 @@ class ItemSliderShow extends React.Component {
 
     return connectDragSource(
       <div
-        className="outfit-item"
+        className="outfit-item-vert"
         style={{ transform: `translateY(${translateDelta}%)` }}
       >
+        <div>Title: {title}</div>
         <div className="outfit-item-img-div">
           <img crossOrigin="Anonymous" className="item-img" src={`${imageURL}?liuahvanb`} alt="" />
         </div>
-        <div>Title: {title}</div>
       </div>
     );
   }
