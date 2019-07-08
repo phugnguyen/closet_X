@@ -14,7 +14,6 @@ router.post("/", upload.single("image"), (req, res) => {
     title: req.body.title,
     imageURL: "nuri"
   });
-  console.log(req.file);
   if (req.file) newOutfit.imageURL = req.file.location;
   newOutfit.save().then(outfit => res.json(outfit));
 });

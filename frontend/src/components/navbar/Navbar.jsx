@@ -13,7 +13,6 @@ class NavBar extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="nav-bar">
         <div className="nav-bar-logo">
