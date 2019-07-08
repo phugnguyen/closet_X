@@ -41,7 +41,7 @@ class ItemForm extends React.Component {
     formData.append("color", this.state.color);
     this.props
       .action(formData, this.props.item._id)
-      .then(res => this.props.history.push("/"));
+      .then(res => this.props.history.push("/closet"));
   }
 
   handleImageFile(e) {
@@ -68,65 +68,69 @@ class ItemForm extends React.Component {
         <div className="modal-subcontainer">
           <div className="new-form-container">
             <form onSubmit={this.handleSubmit}>
-              <img className="track-img-preview" src={this.state.prevImgURL} />
-              <input type="file" onChange={this.handleImageFile} />
-              <label>Item Name: <br/>
-                <input
-                  type="text"
-                  value={this.state.title}
-                  onChange={this.update("title")}
-                />
-              </label>
-              <select
-                onChange={this.update("category")}
-                value={this.state.category}
-              >
-                <option>category</option>
-                <option value="coat">coat</option>
-                <option value="jacket">jacket</option>
-                <option value="blazer">blazer</option>
-                <option value="vest">vest</option>
-                <option value="dress">dress</option>
-                <option value="jumpsuit">jumpsuit</option>
-                <option value="shirt/blouse">shirt/blouse</option>
-                <option value="t-shirt">t-shirt</option>
-                <option value="tank top">tank top</option>
-                <option value="bodysuit">bodysuit</option>
-                <option value="sweatshirt">sweatshirt</option>
-                <option value="sweater">sweater</option>
-                <option value="cardigan">cardigan</option>
-                <option value="pants">pants</option>
-                <option value="jeans">jeans</option>
-                <option value="leggings">leggings</option>
-                <option value="shorts">shorts</option>
-                <option value="skirt">skirt</option>
-                <option value="shoes">shoes</option>
-                <option value="bag">bag</option>
-                <option value="accessory">accessory</option>
-                <option value="etc">etc</option>
-              </select>
+              <div className="form-image">
+                <img className="track-img-preview" src={this.state.prevImgURL} />
+                <input type="file" onChange={this.handleImageFile} />
+              </div>
+              <div className="form-fields">
+                <label>Item Name: <br/>
+                  <input
+                    type="text"
+                    value={this.state.title}
+                    onChange={this.update("title")}
+                  />
+                </label>
+                <select
+                  onChange={this.update("category")}
+                  value={this.state.category}
+                >
+                  <option>category</option>
+                  <option value="coat">coat</option>
+                  <option value="jacket">jacket</option>
+                  <option value="blazer">blazer</option>
+                  <option value="vest">vest</option>
+                  <option value="dress">dress</option>
+                  <option value="jumpsuit">jumpsuit</option>
+                  <option value="shirt/blouse">shirt/blouse</option>
+                  <option value="t-shirt">t-shirt</option>
+                  <option value="tank top">tank top</option>
+                  <option value="bodysuit">bodysuit</option>
+                  <option value="sweatshirt">sweatshirt</option>
+                  <option value="sweater">sweater</option>
+                  <option value="cardigan">cardigan</option>
+                  <option value="pants">pants</option>
+                  <option value="jeans">jeans</option>
+                  <option value="leggings">leggings</option>
+                  <option value="shorts">shorts</option>
+                  <option value="skirt">skirt</option>
+                  <option value="shoes">shoes</option>
+                  <option value="bag">bag</option>
+                  <option value="accessory">accessory</option>
+                  <option value="etc">etc</option>
+                </select>
 
-              <select onChange={this.update("color")} value={this.state.color}>
-                <option>color</option>
-                <option value="black">black</option>
-                <option value="grey">grey</option>
-                <option value="white">white</option>
-                <option value="beige">beige</option>
-                <option value="brown">brown</option>
-                <option value="metallic">metallic</option>
-                <option value="purple">purple</option>
-                <option value="blue">blue</option>
-                <option value="green">green</option>
-                <option value="yellow">yellow</option>
-                <option value="orange">orange</option>
-                <option value="pink">pink</option>
-                <option value="off-white">off-white</option>
-                <option value="red">red</option>
-                <option value="neon">neon</option>
-                <option value="etc">etc</option>
-              </select>
+                <select onChange={this.update("color")} value={this.state.color}>
+                  <option>color</option>
+                  <option value="black">black</option>
+                  <option value="grey">grey</option>
+                  <option value="white">white</option>
+                  <option value="beige">beige</option>
+                  <option value="brown">brown</option>
+                  <option value="metallic">metallic</option>
+                  <option value="purple">purple</option>
+                  <option value="blue">blue</option>
+                  <option value="green">green</option>
+                  <option value="yellow">yellow</option>
+                  <option value="orange">orange</option>
+                  <option value="pink">pink</option>
+                  <option value="off-white">off-white</option>
+                  <option value="red">red</option>
+                  <option value="neon">neon</option>
+                  <option value="etc">etc</option>
+                </select>
 
-              <input type="submit" value={this.props.formType} />
+                <input type="submit" value={this.props.formType} />
+              </div>
             </form>
           </div>
         </div>
