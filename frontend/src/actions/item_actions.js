@@ -25,8 +25,8 @@ export const receiveItemErrors = errors => ({
   errors
 });
 
-export const fetchAllItems = () => dispatch =>
-  ItemAPIUtil.fetchAllItems().then(items =>
+export const fetchAllItems = (id) => dispatch =>
+  ItemAPIUtil.fetchAllItems(id).then(items =>
     dispatch(receiveAllItems(items), err =>
       dispatch(receiveItemErrors(err.responseJSON))
     )

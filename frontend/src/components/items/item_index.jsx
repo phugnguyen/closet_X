@@ -47,21 +47,19 @@ class ItemIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllItems();
+    this.props.fetchAllItems(this.props.userId);
   }
 
   render() {
     let items = this.props.items.map(item => (
-      <ItemIndexEach itemShowModal={this.itemShowModal} item={item} />
+      <ItemIndexEach key={item.id} itemShowModal={this.itemShowModal} item={item} />
     ));
     let modal = this.state.itemShowModal ? (
-      // <div>
-        <ItemShowContainer
-          show={this.state.itemShowModal}
-          hideItemShowModal={this.hideItemShowModal}
-          itemId={this.state.modal}
-        />
-      // </div>
+      <ItemShowContainer
+        show={this.state.itemShowModal}
+        hideItemShowModal={this.hideItemShowModal}
+        itemId={this.state.modal}
+      />
     ) : (
       <></>
     );

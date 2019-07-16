@@ -13,7 +13,7 @@ class OutfitScrollbar extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllItems();
+    this.props.fetchAllItems(this.props.userId);
   }
 
   componentDidUpdate(prevProps) {
@@ -46,6 +46,7 @@ class OutfitScrollbar extends React.Component {
     const renderItems = this.props.items.map(item => {
       return (
           <ItemSliderShow
+            key={item.id}
             item={item}
             translateDelta={this.state.translateDelta}
           />

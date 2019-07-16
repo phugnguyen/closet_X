@@ -6,7 +6,7 @@ const upload = require("../../services/file-upload");
 router.get("/test", (req, res) => res.json({ msg: "This is the items route" }));
 
 router.get("/", (req, res) => {
-  Item.find()
+  Item.find({user: req.query.id})
     .then(items => res.json(items))
     .catch(err => res.status(404).json({ noitemsfound: "No items found" }));
 });

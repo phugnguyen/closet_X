@@ -21,8 +21,8 @@ class NavBar extends React.Component {
         <div className="nav-bar-item-container">
             <div><Link to="/dashboard">Dashboard</Link></div>
             <div class="your-closet"><Link to="/closet">Your closet</Link></div>
-            {this.props.match.params[0] === "closet" ? <div><Link onClick={this.handleClick}> &nbsp; • &nbsp; Add Item</Link></div> : null}
-            {this.props.match.params[0] === "closet" ? <div><Link to="/outfits/new"> &nbsp; • &nbsp; Add Outfit</Link></div> : null}
+            {this.props.match.params[0] === "closet" || this.props.match.params[0] === "outfits" ? <div><Link onClick={this.handleClick}> &nbsp; • &nbsp; Add Item</Link></div> : null}
+            {this.props.match.params[0] === "closet" || this.props.match.params[0] === "outfits" ? <div><Link to="/outfits/new"> &nbsp; • &nbsp; Add Outfit</Link></div> : null}
         </div>
         <div className="sign-out-container">
           <div onClick={this.props.logout}>Sign Out</div>

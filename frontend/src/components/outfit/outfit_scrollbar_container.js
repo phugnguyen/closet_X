@@ -4,6 +4,7 @@ import OutfitScrollbar from "./outfit_scrollbar";
 
 const mapStateToProps = state => {
   return {
+    userId: state.session.user.id,
     items: Object.values(state.entities.items),
     itemLength: Object.values(state.entities.items).length
   };
@@ -11,7 +12,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchAllItems: () => dispatch(fetchAllItems())
+    fetchAllItems: (id) => dispatch(fetchAllItems(id))
   };
 };
 
