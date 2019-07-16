@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const fetchAllItems = () => {
-  return axios.get("/api/items");
+export const fetchAllItems = id => {
+  return axios.get("/api/items", {params: {id}});
 };
 
 export const fetchItem = id => {
