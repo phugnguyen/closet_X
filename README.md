@@ -178,3 +178,4 @@ function collect(connect, monitor) {
 export default DragSource("image", imageSource, collect)(ItemSliderShow);
 
 ```
+
