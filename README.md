@@ -14,7 +14,7 @@ ClosetX is built with the MERN stack: MongoDB, ExpressJS, ReactJS, and NodeJS.
 
 ### Drag and Drop with HTML Canvas
 
-![](./readme/buildoutfit.gif)
+![](./readme/build_outfit.gif)
 
 One of the main features of Closet-X allows users to combine their clothing items into unique outfits for future reference. 
 The code snippet below is the render function contained in the ```OutfitCanvas``` component which allows the user to drag their items onto a HTML5 canvas element and arrange them however they please:
