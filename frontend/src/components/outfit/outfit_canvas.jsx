@@ -166,7 +166,6 @@ class OutfitCanvas extends React.Component {
         <div className="canvas-header">Plan an outfit</div>
         <canvas
           id="canvas"
-          onClick={this.handleCanvasClick}
           onMouseDown={this.onMouseDown}
           onMouseUp={this.onMouseUp}
           onMouseMove={this.onMouseMove}
