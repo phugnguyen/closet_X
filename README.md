@@ -4,7 +4,7 @@
 
 ClosetX is an online platform that allows you to digitize your closet! Design and plan outfits for upcoming events, coordinate with group members for a stylish evening out. Not only can you design your own outfits with items from your closet, you can help design outfits for others in their closet! The most important part of this is the user experience. Users will get other users to post their closets so that they can help plan their outfits! A platform connecting stylists and people that need to be styled.
 
-![](./readme/splash.GIF)
+![](./readme/splash.gif)
 
 ## Technologies
 
@@ -14,7 +14,7 @@ ClosetX is built with the MERN stack: MongoDB, ExpressJS, ReactJS, and NodeJS.
 
 ### Drag and Drop with HTML Canvas
 
-![](./readme/buildoutfit.GIF)
+![](./readme/buildoutfit.gif)
 
 One of the main features of Closet-X allows users to combine their clothing items into unique outfits for future reference. 
 The code snippet below is the render function contained in the ```OutfitCanvas``` component which allows the user to drag their items onto a HTML5 canvas element and arrange them however they please:
