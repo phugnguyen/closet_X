@@ -63,14 +63,14 @@ class Main extends React.Component {
               {/* <!-- Nav --> */}
               <nav id="nav">
                 <ul>
-                  <li>
+                  <li onClick={this.showLoginModal}>
                     <a className="icon solid fa-user" href="#">
-                      <span onClick={this.showLoginModal}>Login</span>
+                      <span>Login</span>
                     </a>
                   </li>
-                  <li>
+                  <li onClick={this.showSignupModal}>
                     <a className="icon solid fa-sitemap" href="#">
-                      <span onClick={this.showSignupModal}>Signup</span>
+                      <span>Signup</span>
                     </a>
                   </li>
                 </ul>
