@@ -52,7 +52,7 @@ class ItemIndex extends React.Component {
 
   render() {
     let items = this.props.items.map(item => (
-      <ItemIndexEach key={item.id} itemShowModal={this.itemShowModal} item={item} />
+      <ItemIndexEach key={item._id} itemShowModal={this.itemShowModal} item={item} />
     ));
     let modal = this.state.itemShowModal ? (
       <ItemShowContainer

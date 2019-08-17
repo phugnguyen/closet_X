@@ -1,10 +1,7 @@
 import React from "react";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
-import ItemFormContainer from "../components/items/new_item_container";
-import ItemUpdateFormContainer from "../components/items/edit_item_container";
 import OutfitScrollbar from "../components/outfit/outfit_scrollbar_container";
-import { Switch, Redirect, Route } from "react-router-dom";
-import DashboardContainer from "../components/dashboard/dashboard_container";
+import { Switch, Redirect } from "react-router-dom";
 import ItemShowContainer from "../components/items/item_show_container";
 
 import MainPage from "./main/Main";

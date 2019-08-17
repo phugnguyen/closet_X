@@ -69,7 +69,7 @@ class ItemForm extends React.Component {
           <div className="new-form-container">
             <form onSubmit={this.handleSubmit}>
               <div className="form-image">
-                <img className="track-img-preview" src={this.state.prevImgURL} />
+                <img className="track-img-preview" src={this.state.prevImgURL} alt="item preview"/>
                 <input type="file" onChange={this.handleImageFile} />
               </div>
               <div className="form-fields">

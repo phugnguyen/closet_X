@@ -64,14 +64,14 @@ class Main extends React.Component {
               <nav id="nav">
                 <ul>
                   <li onClick={this.showLoginModal}>
-                    <a className="icon solid fa-user" href="#">
+                    <div className="icon solid fa-user">
                       <span>Login</span>
-                    </a>
+                    </div>
                   </li>
                   <li onClick={this.showSignupModal}>
-                    <a className="icon solid fa-sitemap" href="#">
+                    <div className="icon solid fa-sitemap">
                       <span>Signup</span>
-                    </a>
+                    </div>
                   </li>
                 </ul>
               </nav>
@@ -101,9 +101,9 @@ class Main extends React.Component {
                 <div className="col-4 col-6-medium col-12-small">
                   {/* <!-- Feature --> */}
                   <section>
-                    <a href="#" className="image featured">
+                    <div className="image featured">
                       <img src="images/splash-1.jpg" alt="" />
-                    </a>
+                    </div>
                     <header>
                       <h3>Okay, so what is this?</h3>
                     </header>
@@ -116,9 +116,9 @@ class Main extends React.Component {
                 <div className="col-4 col-6-medium col-12-small">
                   {/* <!-- Feature --> */}
                   <section>
-                    <a href="#" className="image featured">
+                    <div className="image featured">
                       <img src="images/splash-2.jpg" alt="" />
-                    </a>
+                    </div>
                     <header>
                       <h3>Nice! What's the point?</h3>
                     </header>
@@ -133,9 +133,9 @@ class Main extends React.Component {
                 <div className="col-4 col-6-medium col-12-small">
                   {/* <!-- Feature --> */}
                   <section>
-                    <a href="#" className="image featured">
+                    <div className="image featured">
                       <img src="images/splash-3.jpg" alt="" />
-                    </a>
+                    </div>
                     <header>
                       <h3>What's this built with?</h3>
                     </header>
@@ -176,9 +176,9 @@ class Main extends React.Component {
                 <div className="col-4 col-6-medium col-12-small">
                   {/* <!-- Feature --> */}
                   <section>
-                    <a href="#" className="image featured">
+                    <div className="image featured">
                       <img src="/images/splash-4.jpg" alt="" />
-                    </a>
+                    </div>
                     <header>
                       <h3>
                         <strong>@ILoveFendi</strong>
@@ -190,9 +190,9 @@ class Main extends React.Component {
                 <div className="col-4 col-6-medium col-12-small">
                   {/* <!-- Feature --> */}
                   <section>
-                    <a href="#" className="image featured">
+                    <div className="image featured">
                       <img src="images/splash-5.jpg" alt="" />
-                    </a>
+                    </div>
                     <header>
                       <h3>
                         <strong>@SupremeRUS</strong>
@@ -204,9 +204,9 @@ class Main extends React.Component {
                 <div className="col-4 col-6-medium col-12-small">
                   {/* <!-- Feature --> */}
                   <section>
-                    <a href="#" className="image featured">
+                    <div className="image featured">
                       <img src="images/splash-6.jpg" alt="" />
-                    </a>
+                    </div>
                     <header>
                       <h3>
                         <strong>@Pallette</strong>
@@ -256,7 +256,7 @@ class Main extends React.Component {
                         </div>
                         <div className="col-12">
                           <a
-                            href="#"
+                            href="mailto: closet-x@gmail.com"
                             className="form-button-submit button icon solid fa-envelope"
                           >
                             Send Message
@@ -284,6 +284,7 @@ class Main extends React.Component {
                             <a
                               href="https://github.com/phugnguyen/closet_X"
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               GitHub
                             </a>
@@ -292,6 +293,7 @@ class Main extends React.Component {
                             <a
                               href="https://www.linkedin.com/in/nuri-jeon-4aa947187/"
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               Nuri
                             </a>
@@ -304,6 +306,7 @@ class Main extends React.Component {
                             <a
                               href="https://www.linkedin.com/in/brice-yokoyama/"
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               Brice
                             </a>
@@ -312,6 +315,7 @@ class Main extends React.Component {
                             <a
                               href="https://www.linkedin.com/in/pgnguyen/"
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               Phu
                             </a>

@@ -1,8 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import OutfitContainer from "../outfit/outfit_container";
 import SliderComponent from "../slider/img_slider_component";
-// import SearchBar
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -11,28 +9,31 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    const times = 10;
     let sampleItems = [];
     sampleItems.push(
       {
+        _id: 1,
         title: "My favorite outfit",
         username: "Fashionista",
         imageURL:
           "https://wakamiglobal.com/wp-content/uploads/2017/08/Back-To-School-Outfit-Ideas1.jpg"
       },
       {
+        _id: 2,
         title: "Comfy Clothes",
         username: "FakeUser2",
         imageURL:
           "https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1472588614/12-COMFY0816.jpg"
       },
       {
+        _id: 3,
         title: "My simple outfit",
         username: "SummerClothes",
         imageURL:
           "http://becomechic.com/wp-content/uploads/2016/01/Casual-Denim-Outfits-For-Women-1.jpg"
       },
       {
+        _id: 4,
         title: "My fave",
         username: "ILIKE",
         imageURL:

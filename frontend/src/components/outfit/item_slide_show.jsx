@@ -1,6 +1,5 @@
 import React from "react";
 import { DragSource } from "react-dnd";
-import { withRouter } from "react-router-dom";
 
 const imageSource = {
   beginDrag(props, monitor, component) {

@@ -36,6 +36,7 @@ class SliderComponent extends React.Component {
     const renderItems = this.props.items.map(item => {
       return (
         <OutfitContainer
+          key={item._id}
           outfit={item}
           translateDelta={this.state.translateDelta}
         />

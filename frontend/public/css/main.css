@@ -1957,7 +1957,7 @@ input, select, textarea {
 				padding-right: 0;
 			}
 
-			#nav > ul > li > a {
+			#nav > ul > li > div {
 				border: 0;
 				text-decoration: none;
 				text-transform: uppercase;
@@ -1967,7 +1967,7 @@ input, select, textarea {
 				display: block;
 			}
 
-				#nav > ul > li > a:before {
+				#nav > ul > li > div:before {
 					display: inline-block;
 					background: #878787;
 					color: #e4e4e4;
@@ -1986,7 +1986,7 @@ input, select, textarea {
 					transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
 				}
 
-				#nav > ul > li > a > span {
+				#nav > ul > li > div > span {
 					-moz-transition: color 0.25s ease-in-out;
 					-webkit-transition: color 0.25s ease-in-out;
 					-o-transition: color 0.25s ease-in-out;
@@ -2000,14 +2000,14 @@ input, select, textarea {
 				display: none;
 			} */
 
-			#nav > ul > li.active > a:before,
-			#nav > ul > li:hover > a:before {
+			#nav > ul > li.active > div:before,
+			#nav > ul > li:hover > div:before {
 				background: #ED786A;
 				color: #fff;
 			}
 
-			#nav > ul > li.active > a > span,
-			#nav > ul > li:hover > a > span {
+			#nav > ul > li.active > div > span,
+			#nav > ul > li:hover > div > span {
 				color: #ED786A;
 			}
 
