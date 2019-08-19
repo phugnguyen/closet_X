@@ -16,14 +16,17 @@
   height: 70%;
 }
 
-.nav-bar-item-container a {
+.nav-bar-item-container a, .nav-bar-item-container div {
   text-decoration: none;
 }
 
-.nav-bar-item-container a:visited {
+.nav-bar-item-container a:visited, .nav-bar-item-container div {
   color: black;
+  text-decoration: none;
+  
 }
 
-.nav-bar-item-container a:hover {
+.nav-bar-item-container a:hover, .nav-bar-item-container div:hover {
   color: gray;
+  cursor: pointer;
 }
