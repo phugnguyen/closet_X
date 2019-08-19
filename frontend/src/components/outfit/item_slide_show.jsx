@@ -1,15 +1,14 @@
 import React from "react";
 import { DragSource } from "react-dnd";
-import { withRouter } from "react-router-dom";
 
 const imageSource = {
   beginDrag(props, monitor, component) {
     const id = props.item._id;
     const initialPos = monitor.getClientOffset();
-    const posDiff = monitor.getSourceClientOffset()
-    const pos = {x: initialPos.x - posDiff.x, y: initialPos.y - posDiff.y}
     const source = props.item.imageURL;
-    return {id, pos, source};
+    const width = props.item.width;
+    return {id, initialPos, source, width};
+    
   }
 }
 

@@ -20,7 +20,7 @@ class ItemShow extends React.Component {
           <div className="show-item-container">
             <div className="show-item-contents">
               <div>{this.props.item.title}</div>
-              <img src={this.props.item.imageURL} id="show-image"/>
+              <img src={this.props.item.imageURL} id="show-image" alt={`item id: ${this.props.item._id}`}/>
             </div>
           </div>
         </div>

@@ -19,6 +19,8 @@ class OutfitCanvas extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSave = this.handleSave.bind(this);
     this.dataURItoBlob = this.dataURItoBlob.bind(this);
+    this.returnState = this.returnState.bind(this);
+
   }
 
   componentDidUpdate(prevProps) {
@@ -51,12 +53,28 @@ class OutfitCanvas extends React.Component {
     }
   }
 
+  returnState() {
+    console.log(this.state);
+  }
+
   renderToCanvas(ctx, imageObj) {
     let img = new Image ();
     img.crossOrigin = "Anonymous";
-    img.src = `${imageObj.image.src}?oiearbaerab`;
+    img.src = imageObj.image.src;
+    window.show = this.returnState;
 
     img.onload = function() {
+      console.log(img);
+      let widthScale = 200 / img.width;
+      let heightScale = 200 / img.height;
+      let scale = widthScale < heightScale ? widthScale : heightScale
+      if (imageObj.width === undefined) {
+        imageObj.width = img.width*scale;
+      }
+      if (imageObj.height === undefined) {
+        imageObj.height = img.height*scale;
+      }
+
       ctx.drawImage(img, imageObj.x, imageObj.y, imageObj.width, imageObj.height);
     }
   }
@@ -73,7 +91,7 @@ class OutfitCanvas extends React.Component {
     this.setState({isDragging: false})
     for(let i = 0; i < this.props.items.length; i++) {
       let r = this.props.items[i];
-      if(mx > r.x && mx < r.x + r.width && my>r.y && my<r.y+r.height) {
+      if(mx > r.x && mx < r.x + r.width && my > r.y && my < r.y + r.height) {
         r.isDragging=true;
         this.setState({isDragging: true});
       }
@@ -143,7 +161,7 @@ class OutfitCanvas extends React.Component {
     formData.append("user", this.props.user);
     formData.append("title", this.state.title);
     formData.append("image", blobData);
-    formData.append("imageURL", this.state.imageURL);
+    formData.append("imageURL", this.state.imageURLs);
     formData.append("items", this.state.itemIDs)
 
     this.props.createOutfit(formData)
@@ -160,6 +178,7 @@ class OutfitCanvas extends React.Component {
 }
 
   render() {
+    console.log(this.props.items);
     const { connectDropTarget } = this.props;
     return connectDropTarget(
       <div className="canvas-container">
@@ -187,6 +206,8 @@ class OutfitCanvas extends React.Component {
 const spec = {
   drop(props, monitor, component) {
     const item = monitor.getItem()
+    let diff = monitor.getDifferenceFromInitialOffset();
+    item.newPos = {x: item.initialPos.x + diff.x, y: item.initialPos.y + diff.y}
     props.onDrop(item)
   }
 }
