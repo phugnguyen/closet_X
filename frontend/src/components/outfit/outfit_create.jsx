@@ -14,21 +14,28 @@ class OutfitCreate extends React.Component {
 
     this.onDrop = this.onDrop.bind(this);
     this.handleClear = this.handleClear.bind(this);
+
   }
 
   onDrop(item) {
     let img = new Image();
-    img.crossOrigin = "anonymous";
-    img.src = item.source;
-    let x = parseInt(item.pos.x);
-    let y = parseInt(item.pos.y);
+    let canvas = document.querySelector("canvas");
+    img.crossOrigin = "Anonymous";
+    img.src = `${item.source}?oiearbaerab`
+    let x = parseInt(item.newPos.x) - canvas.offsetLeft;
+    let y = parseInt(item.newPos.y) - canvas.offsetTop;
+    let newItem;
+    
+    let widthScale = 200 / img.width;
+    let heightScale = 200 / img.height;
+    let scale = widthScale < heightScale ? widthScale : heightScale
 
-    let newItem = {id: item.id, image: img, x, y, width: 200, height: 200};
-
+    newItem = {id: item.id, image: img, x, y, width: img.width*scale, height: img.height*scale};
 
     this.setState({
       items: [...this.state.items, newItem]
     });
+    
   }
 
   handleClear(e) {
