@@ -68,8 +68,14 @@ class OutfitCanvas extends React.Component {
       let widthScale = 200 / img.width;
       let heightScale = 200 / img.height;
       let scale = widthScale < heightScale ? widthScale : heightScale
+      if (imageObj.width === undefined) {
+        imageObj.width = img.width*scale;
+      }
+      if (imageObj.height === undefined) {
+        imageObj.height = img.height*scale;
+      }
 
-      ctx.drawImage(img, imageObj.x, imageObj.y, img.width*scale, img.height*scale);
+      ctx.drawImage(img, imageObj.x, imageObj.y, imageObj.width, imageObj.height);
     }
   }
 
@@ -85,7 +91,7 @@ class OutfitCanvas extends React.Component {
     this.setState({isDragging: false})
     for(let i = 0; i < this.props.items.length; i++) {
       let r = this.props.items[i];
-      if(mx > r.x && mx < r.x + r.width && my>r.y && my<r.y+r.height) {
+      if(mx > r.x && mx < r.x + r.width && my > r.y && my < r.y + r.height) {
         r.isDragging=true;
         this.setState({isDragging: true});
       }

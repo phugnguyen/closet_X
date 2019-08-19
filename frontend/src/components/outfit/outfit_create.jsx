@@ -24,14 +24,9 @@ class OutfitCreate extends React.Component {
     img.src = `${item.source}?oiearbaerab`
     let x = parseInt(item.newPos.x) - canvas.offsetLeft;
     let y = parseInt(item.newPos.y) - canvas.offsetTop;
-    let newItem;
+
+    let newItem = {id: item.id, image: img, x, y};
     
-    let widthScale = 200 / img.width;
-    let heightScale = 200 / img.height;
-    let scale = widthScale < heightScale ? widthScale : heightScale
-
-    newItem = {id: item.id, image: img, x, y, width: img.width*scale, height: img.height*scale};
-
     this.setState({
       items: [...this.state.items, newItem]
     });
